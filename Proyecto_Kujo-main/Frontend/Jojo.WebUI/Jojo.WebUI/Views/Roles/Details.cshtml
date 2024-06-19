@@ -1,0 +1,58 @@
+﻿@model Jojo.WebUI.Models.RolesViewModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <div class="row">
+        <div class="col-sm-6">
+            <label class="font-weight-bold">Id</label><br />
+            @Html.DisplayFor(model => model.role_Id)
+        </div>
+        <div class="col-sm-6">
+            <label class="font-weight-bold">Descripcion</label><br />
+            @Html.DisplayFor(model => model.role_Descripcion)
+        </div>
+        
+        <div class="col-sm-12 rounded">
+            <br />
+            <div class="card border-info">
+                <div class="card-header bg-transparent border-info">
+                    Auditoria
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Usuario Creación</th>
+                                <th>Fecha Creación</th>
+                                <th>Último Usuario Modificador</th>
+                                <th>Última Fecha Modificación</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>@Html.DisplayFor(model => model.empl_Crea)</td>
+                                <td>@Html.DisplayFor(model => model.role_FechaCrea)</td>
+                                <td>@Html.DisplayFor(model => model.empl_Modifica)</td>
+                                <td>@Html.DisplayFor(model => model.role_FechaModifica)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <br />
+        <a class="btn btn-info" asp-action="Index">Regresar</a>
+    </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>

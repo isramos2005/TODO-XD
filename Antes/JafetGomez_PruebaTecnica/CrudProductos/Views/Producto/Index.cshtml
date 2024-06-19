@@ -1,0 +1,67 @@
+﻿@model List<ProductosModel>
+@{
+    ViewData["Title"] = "Lista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card">
+    <div class="card-header">
+        Listado Productos
+    </div>
+    <div class="card-body">
+        <button onclick="modalguardar()" class="btn btn-outline-success">
+            <i class="fas fa-plus"></i> Nuevo
+        </button>
+
+        <hr />
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Codigo</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Tipo Producto</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.prod_Id</td>
+                        <td>@item.prod_Codigo</td>
+                        <td>@item.prod_Nombre</td>
+                        <td>@item.PdTi_Nombre</td>
+                        <td>
+                            <button onclick="modaleditar('@item.prod_Id')" class="btn btn-outline-warning btn-sm">
+                                <i class="fas fa-edit"></i> Editar
+                            </button>
+                            <button onclick="modaleliminar('@item.prod_Id','@item.prod_Nombre')" class="btn btn-outline-danger btn-sm">
+                                <i class="fas fa-trash"></i> Eliminar
+                            </button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered d-flex justify-content-center align-items-center" role="document">
+        <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button onclick="cerrarmodal()" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="modalbody" class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section scripts{
+        <script src="~/lib/productos/Producto.js"></script>
+    }

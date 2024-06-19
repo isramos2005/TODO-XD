@@ -1,0 +1,106 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\JSaucedaR\\Desktop\\Proyecto_Kujo-main\\Backend\\Proyecto_Tienda_Jojo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6C335A08-C398-4B61-818C-23CF320DE53F}|Jojo.DataAccess\\Jojo.DataAccess.csproj|c:\\users\\jsaucedar\\desktop\\proyecto_kujo-main\\backend\\proyecto_tienda_jojo\\jojo.dataaccess\\context\\db_kujocentercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C335A08-C398-4B61-818C-23CF320DE53F}|Jojo.DataAccess\\Jojo.DataAccess.csproj|solutionrelative:jojo.dataaccess\\context\\db_kujocentercontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C335A08-C398-4B61-818C-23CF320DE53F}|Jojo.DataAccess\\Jojo.DataAccess.csproj|c:\\users\\jsaucedar\\desktop\\proyecto_kujo-main\\backend\\proyecto_tienda_jojo\\jojo.dataaccess\\repository\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C335A08-C398-4B61-818C-23CF320DE53F}|Jojo.DataAccess\\Jojo.DataAccess.csproj|solutionrelative:jojo.dataaccess\\repository\\productorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F6FADB9-FFB7-41EA-861C-CE6DFE0B9DEC}|Jojo.API\\Jojo.API.csproj|c:\\users\\jsaucedar\\desktop\\proyecto_kujo-main\\backend\\proyecto_tienda_jojo\\jojo.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7F6FADB9-FFB7-41EA-861C-CE6DFE0B9DEC}|Jojo.API\\Jojo.API.csproj|solutionrelative:jojo.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F0435C4-969E-419D-BAB4-E4796D2136DF}|Jojo.BusinessLogic\\Jojo.BusinessLogic.csproj|c:\\users\\jsaucedar\\desktop\\proyecto_kujo-main\\backend\\proyecto_tienda_jojo\\jojo.businesslogic\\services\\accessservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F0435C4-969E-419D-BAB4-E4796D2136DF}|Jojo.BusinessLogic\\Jojo.BusinessLogic.csproj|solutionrelative:jojo.businesslogic\\services\\accessservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C335A08-C398-4B61-818C-23CF320DE53F}|Jojo.DataAccess\\Jojo.DataAccess.csproj|c:\\users\\jsaucedar\\desktop\\proyecto_kujo-main\\backend\\proyecto_tienda_jojo\\jojo.dataaccess\\repository\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C335A08-C398-4B61-818C-23CF320DE53F}|Jojo.DataAccess\\Jojo.DataAccess.csproj|solutionrelative:jojo.dataaccess\\repository\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Db_KujocenterContext.cs",
+              "DocumentMoniker": "C:\\Users\\JSaucedaR\\Desktop\\Proyecto_Kujo-main\\Backend\\Proyecto_Tienda_Jojo\\Jojo.DataAccess\\Context\\Db_KujocenterContext.cs",
+              "RelativeDocumentMoniker": "Jojo.DataAccess\\Context\\Db_KujocenterContext.cs",
+              "ToolTip": "C:\\Users\\JSaucedaR\\Desktop\\Proyecto_Kujo-main\\Backend\\Proyecto_Tienda_Jojo\\Jojo.DataAccess\\Context\\Db_KujocenterContext.cs",
+              "RelativeToolTip": "Jojo.DataAccess\\Context\\Db_KujocenterContext.cs",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAgwHsAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T19:03:34.182Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\JSaucedaR\\Desktop\\Proyecto_Kujo-main\\Backend\\Proyecto_Tienda_Jojo\\Jojo.DataAccess\\Repository\\ProductoRepository.cs",
+              "RelativeDocumentMoniker": "Jojo.DataAccess\\Repository\\ProductoRepository.cs",
+              "ToolTip": "C:\\Users\\JSaucedaR\\Desktop\\Proyecto_Kujo-main\\Backend\\Proyecto_Tienda_Jojo\\Jojo.DataAccess\\Repository\\ProductoRepository.cs",
+              "RelativeToolTip": "Jojo.DataAccess\\Repository\\ProductoRepository.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAwwDMAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-05T16:29:59.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AccessService.cs",
+              "DocumentMoniker": "C:\\Users\\JSaucedaR\\Desktop\\Proyecto_Kujo-main\\Backend\\Proyecto_Tienda_Jojo\\Jojo.BusinessLogic\\Services\\AccessService.cs",
+              "RelativeDocumentMoniker": "Jojo.BusinessLogic\\Services\\AccessService.cs",
+              "ToolTip": "C:\\Users\\JSaucedaR\\Desktop\\Proyecto_Kujo-main\\Backend\\Proyecto_Tienda_Jojo\\Jojo.BusinessLogic\\Services\\AccessService.cs",
+              "RelativeToolTip": "Jojo.BusinessLogic\\Services\\AccessService.cs",
+              "ViewState": "AQIAAAABAAAAAAAAAAAIwBgBAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T19:59:00.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\JSaucedaR\\Desktop\\Proyecto_Kujo-main\\Backend\\Proyecto_Tienda_Jojo\\Jojo.DataAccess\\Repository\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "Jojo.DataAccess\\Repository\\UsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\JSaucedaR\\Desktop\\Proyecto_Kujo-main\\Backend\\Proyecto_Tienda_Jojo\\Jojo.DataAccess\\Repository\\UsuarioRepository.cs",
+              "RelativeToolTip": "Jojo.DataAccess\\Repository\\UsuarioRepository.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAmwDwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-03T19:59:00.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\JSaucedaR\\Desktop\\Proyecto_Kujo-main\\Backend\\Proyecto_Tienda_Jojo\\Jojo.API\\appsettings.json",
+              "RelativeDocumentMoniker": "Jojo.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\JSaucedaR\\Desktop\\Proyecto_Kujo-main\\Backend\\Proyecto_Tienda_Jojo\\Jojo.API\\appsettings.json",
+              "RelativeToolTip": "Jojo.API\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-03T19:58:31.612Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Adobe]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Adobe\Photoshop]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Adobe\Photoshop\60.0]
+"FreeBeforeSlopAdjust"=dword:00380000
+"FreeSpace"=dword:001e84cc
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Adobe\Photoshop\60.0\ApplicationPath]
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Adobe\Photoshop\60.0\PluginPath]
+
+[HKEY_CURRENT_USER\Software\Adobe]
+
+[HKEY_CURRENT_USER\Software\Adobe\3CFA31BD30FC]
+@="BD836E1A8E3646E96A3E1DAB5F293049E88535B0"
+
+[HKEY_CURRENT_USER\Software\Adobe\5FBB13071D4C]
+@="906E1BE915A046199C1272B2932A0C8F2CFE07A7"
+
+[HKEY_CURRENT_USER\Software\Adobe\6211D8F70137]
+@="8AB3FA4C895477B85309AB7CF1FD7AFB7C1378A4"
+
+[HKEY_CURRENT_USER\Software\Adobe\67D2C05A87F7]
+@="20E492710762EFB041D80B00BC51C0A06702DE38"
+
+[HKEY_CURRENT_USER\Software\Adobe\795F7143369D]
+@="8116A8F9F397755E134060C9EEDF04EAF4C87E3E"
+
+[HKEY_CURRENT_USER\Software\Adobe\CommonFiles]
+
+[HKEY_CURRENT_USER\Software\Adobe\CommonFiles\Usage]
+"GUID"="6a95d26b-8442-4486-8afa-4833dc9a71a1"
+"Agent"="C:\\Users\\Ernesto\\Downloads\\Photoshop CS6\\AutoPlay\\Docs\\App\\PhotoshopCS6\\"
+
+[HKEY_CURRENT_USER\Software\Adobe\CommonFiles\Usage\CS6]
+"OptIn"=dword:00000000
+"Date"="2013-05-10T23:19:35Z"
+
+[HKEY_CURRENT_USER\Software\Adobe\CommonFiles\Usage\CS6Headlights]
+
+[HKEY_CURRENT_USER\Software\Adobe\CommonFiles\Usage\CS6Headlights\Adobe Photoshop CS6]
+"Prerelease"=dword:00000000
+"Build"="13.0 20120315.r.428 2012/03/15:21:00:00"
+"LaunchCounter"=dword:00000005
+
+[HKEY_CURRENT_USER\Software\Adobe\CommonFiles\Usage\CS6_CS6_Adobe Photoshop CS6_13.0]
+"OptIn"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Adobe\IAC]
+"UserID"="EFC67146D4EA67B61F569E302FE35614"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser]
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU]
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop]
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList]
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2012-06-04T22:01:19.4650Z]
+@="D:\\Imagenes\\093953B532.png"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2012-06-11T23:16:30.1080Z]
+@="C:\\Users\\DMorao\\Documents\\Ps Creaciones\\Imagenes Usadas\\Cristiano+Ronaldo+Real+Madrid+v+Malaga+Copa+65_CETrxlkOl.jpg"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2012-06-11T23:32:32.9552Z]
+@="C:\\Users\\DMorao\\Documents\\Ps Creaciones\\Imagenes Usadas\\Cristiano+Ronaldo+Barcelona+v+Real+Madrid+4ChIXAPJt00l.jpg"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2012-06-13T21:38:16.3650Z]
+@="D:\\RESPALDO\\RESPALDO\\FOTOS\\MARGARITA\\IMG_0716.JPG"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2012-06-13T22:02:53.6281Z]
+@="D:\\RESPALDO\\RESPALDO\\GRADUACION DE LUIS Y OTRAS\\fotos varias 1\\IMG_0336.JPG"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2012-06-13T22:18:58.9892Z]
+@="C:\\Users\\DMorao\\Documents\\Ps Creaciones\\HDR.psd"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2015-08-20T23:44:31.5010Z]
+@="C:\\Users\\PC\\Desktop\\dexter-morgan-actor-man-1920x1080.jpg"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2015-08-21T13:58:53.5750Z]
+@="C:\\Users\\PC\\Desktop\\5lYCW_wm2lKMbYGvfm2z-D0nHq6H0nEin6whmf6HsJI.jpg"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2015-08-21T13:58:53.7621Z]
+@="C:\\Users\\PC\\Desktop\\all-skins-guide-for-agario-1-l-280x280.png"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2015-08-21T13:58:53.9802Z]
+@="C:\\Users\\PC\\Desktop\\qQriLzu.png"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2015-08-21T18:13:57.5610Z]
+@="C:\\Users\\PC\\Desktop\\Breaking-Bad-Heisenberg.jpg"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2015-08-21T18:14:35.7491Z]
+@="C:\\Users\\PC\\Desktop\\breaking_bad.jpeg"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2015-08-21T18:14:49.42Z]
+@="C:\\Users\\PC\\Desktop\\breaking_bad.jpg"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2015-08-21T18:40:57.6290Z]
+@="C:\\Users\\PC\\Desktop\\card-ok.gif"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2015-08-21T18:40:58.121Z]
+@="C:\\Users\\PC\\Desktop\\drivers-biowindows7-12d15cc.png"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2015-08-21T18:40:58.2192Z]
+@="C:\\Users\\PC\\Desktop\\server-ok.gif"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2024-06-03T19:50:38.1460Z]
+@="C:\\Users\\JSaucedaR\\Downloads\\v (3).png"
+
+[HKEY_CURRENT_USER\Software\Adobe\MediaBrowser\MRU\Photoshop\FileList\2024-06-03T19:53:10.4481Z]
+@="C:\\Users\\JSaucedaR\\Desktop\\img\\logos.png"
+
+[HKEY_CURRENT_USER\Software\Adobe\Photoshop]
+
+[HKEY_CURRENT_USER\Software\Adobe\Photoshop\60.0]
+"uiLanguageKey CS6"="en_US"
+"oldPaletteFontTypeKey CS6"=dword:00000000
+"MemoryUsage"=dword:0000003c
+"ShowStatusWindow"=dword:00000001
+"AppWindowPosition"="[43,25,1296,774]"
+
+[HKEY_CURRENT_USER\Software\Adobe\Photoshop\60.0\VisitedDirs]
+"STARTUPIMAGEDIRECTORY"="C:\\Users\\JSaucedaR\\Desktop\\img\\"

@@ -1,0 +1,222 @@
+﻿@model Jojo.WebUI.Models.ClienteViewModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div style="text-align:center"><h1>Nuevo Cliente</h1></div>
+<br />
+
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create" id="form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label asp-for="clie_Nombres" class="control-label"></label>
+                        <input asp-for="clie_Nombres" id="clie_Nombres" class="form-control" />
+                        <span asp-validation-for="clie_Nombres" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label asp-for="clie_ApellIdos" class="control-label"></label>
+                        <input asp-for="clie_ApellIdos" id="clie_ApellIdos" class="form-control" />
+                        <span asp-validation-for="clie_ApellIdos" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label asp-for="clie_FechaNacimiento" class="control-label"></label>
+                        <input asp-for="clie_FechaNacimiento" id="clie_FechaNacimiento" class="form-control" type="date" />
+                        <span asp-validation-for="clie_FechaNacimiento" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label asp-for="clie_Sexo" class="control-label"></label>
+                        <div>
+                            <input type="radio" asp-for="clie_Sexo" name="clie_Sexo" value="F" /> Femenino
+                            <input type="radio" asp-for="clie_Sexo" name="clie_Sexo" value="M" /> Masculino
+                        </div>
+                        <span asp-validation-for="clie_Sexo" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label asp-for="estc_Id" class="control-label"></label>
+                        <select asp-for="estc_Id" id="estc_Id" class="form-control" asp-items="ViewBag.DDLEstc">
+                            <option value="">Escoge un Estado Civil</option>
+                        </select>
+                        <span asp-validation-for="estc_Id" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label asp-for="clie_Telefeno" class="control-label"></label>
+                        <input asp-for="clie_Telefeno" id="clie_Telefeno" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" class="form-control" />
+                        <span asp-validation-for="clie_Telefeno" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label asp-for="dept_Id" class="control-label"></label>
+                        <select asp-for="dept_Id" id="dept_Id" class="form-control" onchange="Munis()" asp-items="ViewBag.dept">
+                            <option value="">Escoge un Departamento</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label asp-for="muni_Id" class="control-label"></label>
+                        <select asp-for="muni_Id" id="muni_Id" class="form-control" disabled asp-items="ViewBag.muni">
+                        </select>
+                        <span asp-validation-for="muni_Id" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label asp-for="clie_Direccion" class="control-label"></label>
+                        <input asp-for="clie_Direccion" id="clie_Direccion" class="form-control" />
+                        <span asp-validation-for="clie_Direccion" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mt-3">
+                <a asp-action="Index" class="btn btn-danger">Cancelar</a>
+                <input type="button" onclick="ingresar()" value="Crear" class="btn btn-primary" />
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+<script>
+    function Munis() {
+        $.ajax({
+            type: "POST",
+            url: "/Clientes/Munis",
+            data: { id: $("#dept_Id").val() },
+            dataType: "json",
+            success: function (response) {
+                console.log(response);
+                $("#muni_Id").attr("disabled", false);
+                $("#muni_Id").empty();
+                $("#muni_Id").append("<option value=''>Escoge un Municipio</option>");
+                $.each(response, function (i, value) {
+                    $("#muni_Id").append("<option value=" + value.muni_Id + ">" + value.muni_Descripcion + "</option>");
+                });
+            },
+            error: function (xhr, status, error) {
+                console.log("adios");
+            }
+        });
+    }
+
+    function ingresar() {
+        var insertar = true;
+
+        if ($("#clie_Nombres").val() == "") {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El Campo Nombres es requerido',
+                position: 'topRight',
+            });
+            insertar = false;
+        }
+        if ($("#clie_ApellIdos").val() == "") {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El Campo Apellidos es requerido',
+                position: 'topRight',
+            });
+            insertar = false;
+        }
+        if ($("#clie_FechaNacimiento").val() == "" || $("#clie_FechaNacimiento").val() == undefined || $("#clie_FechaNacimiento").val() == null) {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El Campo Fecha de Nacimiento es requerido',
+                position: 'topRight',
+            });
+            insertar = false;
+        }
+        if ($('input[name=clie_Sexo]:checked').val() == "null" || $('input[name=clie_Sexo]:checked').val() == "" || $('input[name=clie_Sexo]:checked').val() == undefined) {
+
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El Campo Sexo es requerido',
+                position: 'topRight',
+            });
+            insertar = false;
+        }
+        if ($("#estc_Id").val() == "") {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El Campo Estado Civil es requerido',
+                position: 'topRight',
+            });
+            insertar = false;
+        }
+        if ($("#clie_Telefeno").val() == "") {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El Campo Teléfono es requerido',
+                position: 'topRight',
+            });
+            insertar = false;
+        }
+        if ($("#dept_Id").val() == "") {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El Campo Departamento es requerido',
+                position: 'topRight',
+            });
+            insertar = false;
+        }
+
+        if ($("#dept_Id").val() != "") {
+
+            if ($("#muni_Id").val() == "") {
+                iziToast.warning({
+                    title: 'Advertencia',
+                    message: 'El Campo Municipio es requerido',
+                    position: 'topRight',
+                });
+                insertar = false;
+            }
+        }
+
+
+        if ($("#clie_Direccion").val() == "") {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El Campo Dirección es requerido',
+                position: 'topRight',
+            });
+            insertar = false;
+        }
+
+        if (insertar) {
+            sessionStorage.setItem("Createclie","si");
+            $("#form").submit();
+        }
+    }
+</script>
+
+
+
+
+
+
+@*<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+    <script src="~/js/app/Joyeria/Clientes.js"></script>*@

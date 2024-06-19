@@ -1,0 +1,74 @@
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\ConnectionApiSignalR.exe
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\ConnectionApiSignalR.deps.json
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\ConnectionApiSignalR.runtimeconfig.json
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\ConnectionApiSignalR.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\ConnectionApiSignalR.pdb
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ConnectionApiSignalR.csproj.AssemblyReference.cache
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ConnectionApiSignalR.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ConnectionApiSignalR.AssemblyInfoInputs.cache
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ConnectionApiSignalR.AssemblyInfo.cs
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ConnectionApiSignalR.csproj.CoreCompileInputs.cache
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ConnectionApiSignalR.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\refint\ConnectionApiSignalR.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ConnectionApiSignalR.pdb
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ConnectionApiSignalR.genruntimeconfig.cache
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ref\ConnectionApiSignalR.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Bcl.TimeProvider.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Extensions.Features.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\System.IO.Pipelines.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\System.Threading.Channels.dll
+C:\Users\Luis Gonzalez\source\repos\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ConnectionApiSignalR.csproj.CopyComplete
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\ConnectionApiSignalR.exe
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\ConnectionApiSignalR.deps.json
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\ConnectionApiSignalR.runtimeconfig.json
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\ConnectionApiSignalR.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\ConnectionApiSignalR.pdb
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Bcl.TimeProvider.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Extensions.Features.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\System.IO.Pipelines.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\System.Text.Json.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\bin\Debug\net6.0\System.Threading.Channels.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ConnectionApiSignalR.csproj.AssemblyReference.cache
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ConnectionApiSignalR.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ConnectionApiSignalR.AssemblyInfoInputs.cache
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ConnectionApiSignalR.AssemblyInfo.cs
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ConnectionApiSignalR.csproj.CoreCompileInputs.cache
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\Connecti.9E32C75D.Up2Date
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ConnectionApiSignalR.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\refint\ConnectionApiSignalR.dll
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ConnectionApiSignalR.pdb
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ConnectionApiSignalR.genruntimeconfig.cache
+C:\Users\JSaucedaR\Desktop\ConnectionApiSignalR\ConnectionApiSignalR\obj\Debug\net6.0\ref\ConnectionApiSignalR.dll

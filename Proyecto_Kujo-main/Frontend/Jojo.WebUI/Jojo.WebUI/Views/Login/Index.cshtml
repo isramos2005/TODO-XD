@@ -1,0 +1,205 @@
+﻿
+@{
+    Layout = null;
+}
+<style>
+
+
+    .btn-pass {
+        background: none; /* color de fondo */
+        color: black; /* color de fuente */
+        border: 2px solid #000000; /* tamaño y color de borde */
+        padding: 16px 20px;
+        border-radius: 3px; /* redondear bordes */
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        display: inline-block;
+        border-radius: 20px;
+    }
+
+        .btn-pass:hover {
+            color: white; /* color de fuente hover */
+        }
+
+        .btn-pass::after {
+            content: "";
+            background: rgb(80,13,71);
+            background: linear-gradient(90deg, rgba(80,13,71,1) 29%, rgba(98,4,88,1) 54%, rgba(36,1,56,1) 100%); /* color de fondo hover */
+            position: absolute;
+            color: white;
+            z-index: -1;
+            padding: 16px 20px;
+            display: block;
+            left: -20%;
+            right: -20%;
+            top: 0;
+            bottom: 0;
+            transform: skewX(-45deg) scale(0, 1);
+            transition: all 0.3s ease;
+        }
+
+        .btn-pass:hover::after {
+            transition: all 0.3s ease-out;
+            transform: skewX(-45deg) scale(1, 1);
+        }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS [ REQUIRED ] -->
+    <link rel="stylesheet" href="~/assets/css/color-schemes/all-headers/violet/bootstrap.min.css">
+
+    <!-- Nifty CSS [ REQUIRED ] -->
+    <link rel="stylesheet" href="~/assets/css/color-schemes/all-headers/violet/nifty.min.css">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/icon.jpeg" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/LOGIN/vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/LOGIN/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/LOGIN/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/LOGIN/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/LOGIN/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/LOGIN/vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/LOGIN/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/LOGIN/vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/LOGIN/css/util.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/LOGIN/css/main.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/assets/iziToast-master/dist/css/iziToast.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+</head>
+<body>
+
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url(/loginfondo.jpg);">
+            <div class="wrap-login100 p-t-30 p-b-50">
+
+                @if (TempData["MensajeToast"] != null)
+                {
+                <script>
+                    $(document).ready(function () {
+                        iziToast.error({
+                            title: 'Error',
+                            message: '@TempData["MensajeToast"].ToString()',
+                            position: 'topRight'
+                        });
+                    });
+                </script>
+                }
+                <!-- Login card -->
+                <div class="card shadow-lg border-dark border-1 pt-5 pb-5" style="background-color: rgba(0, 0, 0, 0.8);border-radius:10px">
+                    <div class="card-body">
+
+                        <div class="text-center text-white-50">
+                            <img src="https://mtlmr.carrd.co/assets/images/image01.gif?v72701132637851" class="rounded-circle" style="width: 30%; border: 2px solid white; height: 6rem" alt="Profile" />
+                            <h1 class="h3 text-light mt-3">Bienvenido</h1>
+                            <p>Inicio de Sesión</p>
+                        </div>
+
+                        <form class="mt-4" id="login" action="@Url.Action("Index","Login")" method="post">
+
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Usuario" autofocus="" style="border-radius:20px" name="txtuser" id="user">
+                            </div>
+
+                            <div class="mb-3">
+                                <input type="password" class="form-control" placeholder="Contraseña" style="border-radius:20px" name="txtpass" id="pass">
+                            </div>
+
+
+                            <div class="d-grid mt-5">
+                                <button class="btn text-light btn-pass btn-lg" type="button" onclick="Login()" style="border-radius:20px">Iniciar Sesión</button>
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+                <!-- END : Login card -->
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+    <script src="~/assets/LOGIN/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/LOGIN/vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/LOGIN/vendor/bootstrap/js/popper.js"></script>
+    <script src="~/assets/LOGIN/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/LOGIN/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/LOGIN/vendor/daterangepicker/moment.min.js"></script>
+    <script src="~/assets/LOGIN/vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/LOGIN/vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/LOGIN/js/main.js"></script>
+    <!--===============================================================================================-->
+    <script src="~/assets/iziToast-master/dist/js/iziToast.js"></script>
+
+</body>
+</html>
+
+<script>
+    function Login() {
+        var logger = true;
+
+        if ($("#user").val() == "") {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El Campo Nombre Usuario es requerido',
+                position: 'topRight',
+            });
+            logger = false;
+        }
+
+        if ($("#pass").val() == "") {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El Campo Contraseña es requerido',
+                position: 'topRight',
+            });
+            logger = false;
+        }
+
+
+        if (logger) {
+
+            iziToast.show({
+                title: ' ',
+                message: 'Iniciando Sesión',
+                position: 'topRight',
+                timeout: 3000,
+                close: false,
+            });
+
+            setTimeout(function () {
+                if (logger) {
+                    $("#login").submit();
+                }
+            }, 2000);
+        }
+    }
+</script>
+

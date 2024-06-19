@@ -1,0 +1,102 @@
+﻿@model Jojo.WebUI.Models.ClienteViewModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Detalles</h1>
+<div>
+    <div class="row">
+        <div class="col-sm-4">
+            <label class="font-weight-bold">Id</label><br />
+            @Html.DisplayFor(model => model.clie_Id)
+
+        </div>
+        <div class="col-sm-4">
+            <label class="font-weight-bold">Nombre</label><br />
+            @Html.DisplayFor(model => model.clie_Nombres)
+
+        </div>
+        <div class="col-sm-4">
+            <label class="font-weight-bold">Apellido</label><br />
+            @Html.DisplayFor(model => model.clie_ApellIdos)
+
+        </div>
+        <div class="col-sm-4">
+            <br />
+            <label class="font-weight-bold">Fecha Nacimiento</label><br />
+            @Html.DisplayFor(model => model.clie_FechaNacimiento)
+
+        </div>
+
+        <div class="col-sm-4">
+            <br />
+            <label class="font-weight-bold">Sexo</label><br />
+            @Html.DisplayFor(model => model.clieSexo)
+        </div>
+
+        <div class="col-sm-4">
+            <br />
+            <label class="font-weight-bold">Estado Civil</label><br />
+            @Html.DisplayFor(model => model.estc_Descripcion)
+        </div>
+        <div class="col-sm-4">
+            <br />
+            <label class="font-weight-bold">Telefono</label><br />
+            @Html.DisplayFor(model => model.clie_Telefeno)
+        </div>
+        <div class="col-sm-4">
+            <br />
+            <label class="font-weight-bold">Departamento</label><br />
+            @Html.DisplayFor(model => model.dept_Descripcion)
+        </div>
+        <div class="col-sm-4">
+            <br />
+            <label class="font-weight-bold">Municipio</label><br />
+            @Html.DisplayFor(model => model.muni_Descripcion)
+        </div>
+        <div class="col-sm-4">
+            <br />
+            <label class="font-weight-bold">Direccion</label><br />
+            @Html.DisplayFor(model => model.clie_Direccion)
+        </div>
+
+
+        <div class="col-sm-12 rounded">
+            <br />
+            <div class="card border-info">
+                <div class="card-header bg-transparent border-info">
+                    Auditoria
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Usuario Creación</th>
+                                <th>Fecha Creación</th>
+                                <th>Último Usuario Modificador</th>
+                                <th>Última Fecha Modificación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>@Html.DisplayFor(model => model.empl_Crea)</td>
+                                <td>@Html.DisplayFor(model => model.clie_FechaCreacion)</td>
+                                <td>@Html.DisplayFor(model => model.empl_Modifica)</td>
+                                <td>@Html.DisplayFor(model => model.clie_FechaModificacion)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <br />
+        <a class="btn btn-info" asp-action="Index">Regresar</a>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>

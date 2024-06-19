@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Jojo.WebUI.Models.FacturaViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Facturas</h1>
+
+
+
+<p>
+    <a asp-action="Create" class="btn btn-primary mb-2">Nuevo <i class="pli-add"></i></a>
+</p>
+<table class="table table-responsive" id="DataTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.fact_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fact_fechacompra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreEmpleado)
+            </th>
+            <th>
+                Acciones
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fact_Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fact_fechacompra)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreCliente)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreEmpleado)
+                </td>
+                <td>
+                    <a class="EstaListo btn btn-outline-warning"><i class='icon pli-pen-4'></i></a>
+                    @Html.ActionLink("", "Details", new { id = item.fact_Id }, new { @class = "btn btn-outline-info pli-eye-visible" })
+                    <a class="EliminarFake btn-delete btn btn-outline-danger"><i class='icon pli-trash'></i></a>
+
+                    @*<a class="btn-delete btn btn-danger" data-id="@item.fact_Id">Eliminar</a>*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="~/js/app/Tienda/Facturas.js"></script>

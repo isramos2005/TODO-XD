@@ -1,0 +1,260 @@
+﻿@model IEnumerable<Jojo.WebUI.Models.ProductoViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Productos</h1>
+
+
+
+<p>
+    <button class="btn btn-primary" onclick="ModalCrear()">Nuevo <i class="pli-add"></i></button>
+</p>
+
+<table class="table table-responsive" id="DataTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.prod_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.prod_Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cate_Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.prov_Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.prod_Stock)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.prod_Precio)
+            </th>
+            <th class="col-3">
+                Acciones
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.prod_Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.prod_Descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cate_Descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.prov_Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.prod_Stock)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.prod_Precio)
+                </td>
+                <td>
+                    <button class="btn btn-outline-warning" onclick="ModalEditar('@item.prod_Id,@item.prod_Descripcion,@item.prod_Precio,@item.cate_Id,@item.prov_Id,@item.prod_Stock')"><i class='icon pli-pen-4'></i></button>
+                    @Html.ActionLink("", "Details", new { id = item.prod_Id }, new { @class = "btn btn-outline-info pli-eye-visible" })
+                    <button class="btn btn-outline-danger" onclick="ModalDelete('@item.prod_Id')"><i class='icon pli-trash'></i></button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+@*Create*@
+<div class="modal fade" id="ModalCrear" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTopTitle">Crear</h5>
+
+            </div>
+            <form action="@Url.Action("Create","Productos")" method="post" id="FI">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <label for="nameWithTitle" class="form-label">Descripción del producto</label>
+                            <input type="text"
+                                   id="descripcionI"
+                                   class="form-control"
+                                   name="descripcionI" />
+                        </div>
+                        <div class="col-6 mb-3">
+                            <label for="nameWithTitle" class="form-label">Precio Unitario</label>
+                            <input type="text"
+                                   id="PrecioI"
+                                   class="form-control"
+                                   name="PrecioI" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <label for="nameWithTitle" class="form-label">Categoría</label>
+                            <select name="CategoriaI" id="CategoriaI" asp-items="ViewBag.cate" class="form-control">
+                                <option value="">Elige una categoría</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <label for="nameWithTitle" class="form-label">Proveedor</label>
+                            <select name="ProveedorI" id="ProveedorI" asp-items="ViewBag.prov" class="form-control">
+                                <option value="">Elige un proveedor</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <label for="nameWithTitle" class="form-label">Stock</label>
+                            <input type="text"
+                                   id="stockI"
+                                   class="form-control"
+                                   name="stockI" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="ModalCrearCerrar()" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Cancelar <i class="la la-ban"></i>
+                    </button>
+                    <button type="button" onclick="Ingresar()" class="btn btn-primary">
+                        Guardar <i class="la la-check"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@*Update*@
+<div class="modal fade" id="ModalEditar" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTopTitle">Edición</h5>
+
+            </div>
+            <form action="@Url.Action("Update","Productos")" method="post" id="FE">
+                <div class="modal-body">
+                    <div class="col mb-3">
+                        <input type="hidden"
+                               id="idE"
+                               class="form-control"
+                               name="idE" />
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <label for="nameWithTitle" class="form-label">Descripción del producto</label>
+                            <input type="text"
+                                   id="descripcionE"
+                                   class="form-control"
+                                   name="descripcionE" />
+                        </div>
+                        <div class="col-6 mb-3">
+                            <label for="nameWithTitle" class="form-label">Precio Unitario</label>
+                            <input type="text"
+                                   id="PrecioE"
+                                   class="form-control"
+                                   name="PrecioE" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6 mb-3">
+                            <label for="nameWithTitle" class="form-label">Categoría</label>
+                            <select name="CategoriaE" id="CategoriaE" asp-items="ViewBag.cate" class="form-control">
+                                <option value="">Elige una categoría</option>
+                            </select>
+                        </div>
+                        <div class="col-6 mb-3">
+                            <label for="nameWithTitle" class="form-label">Proveedor</label>
+                            <select name="ProveedorE" id="ProveedorE" asp-items="ViewBag.prov" class="form-control">
+                                <option value="">Elige un proveedor</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <label for="nameWithTitle" class="form-label">Stock</label>
+                            <input type="text"
+                                   id="stockE"
+                                   class="form-control"
+                                   name="stockE" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="ModalEditarCerrar()" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Cancelar <i class="la la-ban"></i>
+                    </button>
+                    <button type="button" onclick="Ingresar2()" class="btn btn-primary">
+                        Guardar <i class="la la-check"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@*Delete*@
+<div class="modal fade" id="ModalDelete" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTopTitle"></h5>
+            </div>
+            <form action="@Url.Action("Delete","Productos")" method="post" id="FD">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <input type="hidden"
+                                   id="idD"
+                                   class="form-control"
+                                   name="idD" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center h4">
+                            <h4 class="padding-top-30 mb-30 weight-500">¿Desea Eliminar Este Registro?</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-primary border-radius-100 btn-block confirmation-btn" data-dismiss="modal">Cancelar<i class="la la-ban"></i></button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" onclick="Ingresar3()" class="btn btn-danger border-radius-100 btn-block confirmation-btn" data-dismiss="modal">Eliminar<i class="bx bx-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@**@
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="~/js/app/Productos.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#DataTable').dataTable({
+            "language": {
+                "url": "https://cdn.datatables.net/plug-ins/1.13.2/i18n/es-ES.json"
+            },
+
+        });
+    });
+
+
+</script>

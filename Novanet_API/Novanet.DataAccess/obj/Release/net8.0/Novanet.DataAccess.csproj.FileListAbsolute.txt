@@ -1,0 +1,15 @@
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.DataAccess\bin\Release\net8.0\Novanet.DataAccess.deps.json
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.DataAccess\bin\Release\net8.0\Novanet.DataAccess.dll
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.DataAccess\bin\Release\net8.0\Novanet.DataAccess.pdb
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.DataAccess\bin\Release\net8.0\Novanet.Entities.dll
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.DataAccess\bin\Release\net8.0\Novanet.Entities.pdb
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.DataAccess\obj\Release\net8.0\Novanet.DataAccess.csproj.AssemblyReference.cache
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.DataAccess\obj\Release\net8.0\Novanet.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.DataAccess\obj\Release\net8.0\Novanet.DataAccess.AssemblyInfoInputs.cache
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.DataAccess\obj\Release\net8.0\Novanet.DataAccess.AssemblyInfo.cs
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.DataAccess\obj\Release\net8.0\Novanet.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.DataAccess\obj\Release\net8.0\Novanet..7268F667.Up2Date
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.DataAccess\obj\Release\net8.0\Novanet.DataAccess.dll
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.DataAccess\obj\Release\net8.0\refint\Novanet.DataAccess.dll
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.DataAccess\obj\Release\net8.0\Novanet.DataAccess.pdb
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.DataAccess\obj\Release\net8.0\ref\Novanet.DataAccess.dll

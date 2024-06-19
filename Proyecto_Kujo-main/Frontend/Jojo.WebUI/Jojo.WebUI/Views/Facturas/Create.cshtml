@@ -1,0 +1,337 @@
+﻿@model Jojo.WebUI.Models.FacturaViewModel
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Nueva</h1>
+
+<h4>Factura</h4>
+<hr />
+<div class="row">
+    <div class="col-sm-5">
+        <div class="card" style="box-shadow: 0px 0px 6px 4px;">
+            <div class="card-header"></div>
+            <div class="card-body">
+                <div class="row pb-4">
+                    <form asp-action="Create" id="createform">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <label asp-for="clie_Id" class="control-label"></label>
+                            <select asp-for="clie_Id" id="clie_Id" onchange="CambioId()" class="form-control" asp-items="ViewBag.clie_Id">
+                                <option value="">Elige un cliente</option>
+                            </select>
+                        </div>
+                        <div class="form-group mt-5">
+                            <input type="button" id="btn-create" value="Crear Factura" onclick="CrearFactura()" class="btn btn-primary" />
+                            <input type="button" id="Cancelar_Venta" value="Cancelar Venta" onclick="CancelarFactura()" class="btn btn-danger" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </div>
+
+
+    <div class="col-sm-7">
+
+        <div class="card" style="box-shadow: 0px 0px 6px 4px;">
+            <div class="card-header"></div>
+            <div class="card-body">
+
+                <form action="@Url.Action("CreateFactDet","Facturas")" id="Detallesform" method="post">
+                    <input type="hidden" id="NuevaId" name="NuevaId" value="@ViewBag.NuevoId" />
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label class="control-label">Producto</label>
+                            <select class="form-control" asp-items="ViewBag.prod_Id" id="prod_Id" name="prod_Id" disabled>
+                                <option value="">Elige un producto</option>
+                            </select>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="control-label">Precio</label>
+                            <input type="hidden" id="PrecioHidden" name="txtPrecio" />
+                            <input type="text" class="form-control" id="txtPrecio" disabled />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <label class="control-label">Cantidad</label>
+                            <input type="number" class="form-control" id="txtCantidad" name="txtCantidad" disabled />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="form-group">
+                        <input type="button" id="btnAgregarProducto" value="Agregar" onclick="ValidarDetalle()" class="btn btn-primary" disabled />
+                        <input type="button" id="TerminarVenta" value="Terminar Factura" onclick="TerminarFactura()" class="btn btn-info" disabled />
+                    </div>
+
+                </form>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="mt-5">
+    <table class="table" id="DataTable">
+        <thead class="bg-dark">
+            <tr>
+                <th class="text-light text-center">
+                    Id
+                </th>
+                <th class="text-light text-center">
+                    Producto
+                </th>
+                <th class="text-light text-center">
+                    Precio
+                </th>
+                <th class="text-light text-center">
+                    Cantidad
+                </th>
+                <th class="text-light text-center">
+                    Acciones
+                </th>
+            </tr>
+        </thead>
+        <tbody id="tbodyVentas">
+            @foreach (var item in ViewBag.Detalles)
+            {
+                <tr>
+                    <td>
+                        @item.facd_Id
+                    </td>
+                    <td>
+                        @item.prod_Descripcion
+                    </td>
+                    <td>
+                        @item.facd_PrecioUnitario
+                    </td>
+                    <td>
+                        @item.prod_Cantidad
+                    </td>
+                    <td>
+                        <button class="btn btn-outline-danger" onclick=ModalDelete(@item.facd_Id)><i class='icon pli-trash'></i></button>
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+    <div class="row mt-2">
+        <div class="col-sm-4">
+            <label>SubTotal</label>
+            <input class="form-control border-dark" type="text" id="txtSubTotal" value="@ViewBag.Subtotal" disabled />
+        </div>
+        <div class="col-sm-4">
+            <label>IVA</label>
+            <input class="form-control border-dark" type="text" id="txtIVA" value="@ViewBag.IVA" disabled />
+        </div>
+        <div class="col-sm-4">
+            <label>Total</label>
+            <input class="form-control border-dark" type="text" id="txtTotal" value="@ViewBag.Total" disabled />
+        </div>
+    </div>
+</div>
+
+
+@*Delete*@
+<div class="modal fade" id="ModalDelete" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTopTitle"></h5>
+            </div>
+            <form action="@Url.Action("DeleteDetails","Facturas")" method="post" id="FD">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <input type="hidden"
+                                   id="idD"
+                                   class="form-control"
+                                   name="idD" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center h4">
+                            <h4 class="padding-top-30 mb-30 weight-500">¿Desea Eliminar Este Registro?</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-primary border-radius-100 btn-block confirmation-btn" data-dismiss="modal">Cancelar<i class="la la-ban"></i></button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" onclick="Ingresar3()" class="btn btn-danger border-radius-100 btn-block confirmation-btn" data-dismiss="modal">Eliminar<i class="bx bx-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+
+        $(document).ready(function () {
+
+
+            $('#DataTable').dataTable({
+                "language": {
+                    "url": "https://cdn.datatables.net/plug-ins/1.13.2/i18n/es-MX.json"
+                },
+
+            });
+
+
+
+            var NuevaFacturaId = $("#NuevaId").val();
+            if ($("#NuevaId").val() == "" || $("#NuevaId").val() == null) {
+                NuevaFacturaId = 0
+            }
+
+
+
+
+            var cat = sessionStorage.getItem("Insert");
+            var cliente = sessionStorage.getItem("Cliente");
+
+
+            if (cat == "123") {
+                $("#prod_Id").attr("disabled", false);
+                $("#txtCantidad").attr("disabled", false);
+                $("#btnAgregarProducto").attr("disabled", false);
+                $("#TerminarVenta").attr("disabled", false);
+
+
+
+                $("#clie_Id").attr("disabled", true);
+                $("#btn-create").attr("disabled", true);
+                $("#Cancelar_Venta").attr("disabled", true);
+
+            }
+
+            if (cliente != null || cliente != "") {
+                $("#clie_Id").val(cliente)
+            }
+
+
+
+
+        });
+
+
+        @* CREAR FACTURA *@
+        function CrearFactura() {
+
+            if ($("#clie_Id").val() == "") {
+                iziToast.warning({
+                    title: 'Advertencia',
+                    message: 'Es necesario un cliente para la factura',
+                    position: 'topRight',
+                });
+            }
+            else {
+                sessionStorage.setItem("Insert", "123");
+                sessionStorage.setItem("Cliente", $("#clie_Id").val());
+
+                $("#createform").submit();
+            }
+
+        }
+
+
+        @* PRECIO *@
+        $("#prod_Id").change(function () {
+
+
+            var prod_Id = $("#prod_Id").val();
+
+            $.ajax({
+                type: "POST",
+                url: "/Facturas/PrecioProducto",
+                data: { id: prod_Id },
+                dataType: "json",
+                success: function (response) {
+                    console.log(response);
+                    var precioSelect = $('#txtPrecio');
+                    precioSelect.empty();
+                    $.each(response, function (i, value) {
+                        console.log(value.prod_Precio);
+                        $('#txtPrecio').val(value.prod_Precio);
+                        $('#PrecioHidden').val(value.prod_Precio);
+                    });
+
+                },
+                error: function (xhr, status, error) {
+                    console.log("adios");
+                }
+            });
+        });
+
+
+        @* CANCELAR FACTURA *@
+        function CancelarFactura() {
+            sessionStorage.clear();
+            $("#NuevaId").val("0");
+            window.location = "/Facturas/Listado";
+        }
+
+
+
+        @* VALIDAR DETALLE *@
+
+        function ValidarDetalle() {
+            var insertar = true;
+
+            if ($("#prod_Id").val() == "") {
+                iziToast.warning({
+                    title: 'Advertencia',
+                    message: 'El Campo producto es requerido',
+                    position: 'topRight',
+                });
+                insertar = false;
+            }
+
+            if ($("#txtCantidad").val() == "" || $("#txtCantidad").val() == null)
+            {
+                iziToast.warning({
+                    title: 'Advertencia',
+                    message: 'El Campo cantidad es requerido',
+                    position: 'topRight',
+                });
+                insertar = false;
+            }
+
+            if (insertar) {
+                $("#Detallesform").submit();
+            }
+
+        }
+
+        @* Terminar Factura DETALLE *@
+        function TerminarFactura() {
+            sessionStorage.clear();
+            $("#NuevaId").val("0");
+            sessionStorage.setItem("Insert", "321");
+            window.location = '/Facturas/Terminar/'
+        }
+
+        function ModalDelete(id) {
+            $("#idD").val(id);
+            $("#ModalDelete").modal("show");
+        }
+        function Ingresar3() {
+            $("#FD").submit();
+        }
+
+</script>

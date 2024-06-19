@@ -1,0 +1,80 @@
+﻿@model Jojo.WebUI.Models.ProductoViewModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Detalles</h1>
+
+<div>
+    <div class="row">
+        <div class="col-sm-4">
+            <label class="font-weight-bold">Id</label><br />
+            @Html.DisplayFor(model => model.prod_Id)
+        </div>
+        <div class="col-sm-4">
+            <label class="font-weight-bold">Producto</label><br />
+            @Html.DisplayFor(model => model.prod_Descripcion)
+        </div>
+        <div class="col-sm-4">
+            <label class="font-weight-bold">Categoria</label><br />
+            @Html.DisplayFor(model => model.cate_Descripcion)
+        </div>
+        <div class="col-sm-4">
+            <br />
+            <label class="font-weight-bold">Proveedor</label><br />
+            @Html.DisplayFor(model => model.prov_Nombre)
+        </div>
+        <div class="col-sm-4">
+            <br />
+            <label class="font-weight-bold">Stock</label><br />
+            @Html.DisplayFor(model => model.prod_Stock)
+        </div>
+        <div class="col-sm-4">
+            <br />
+            <label class="font-weight-bold">Precio</label><br />
+            @Html.DisplayFor(model => model.prod_Precio)
+        </div>
+
+
+
+
+        <div class="col-sm-12 rounded">
+            <br />
+            <div class="card border-info">
+                <div class="card-header bg-transparent border-info">
+                    Auditoria
+                </div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Usuario Creación</th>
+                                <th>Fecha Creación</th>
+                                <th>Último Usuario Modificador</th>
+                                <th>Última Fecha Modificación</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>@Html.DisplayFor(model => model.empl_Crea)</td>
+                                <td>@Html.DisplayFor(model => model.prod_FechaCreacion)</td>
+                                <td>@Html.DisplayFor(model => model.empl_Modifica)</td>
+                                <td>@Html.DisplayFor(model => model.prod_FechaModificacion)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <br />
+        <a class="btn btn-info" asp-action="Index">Regresar</a>
+    </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>

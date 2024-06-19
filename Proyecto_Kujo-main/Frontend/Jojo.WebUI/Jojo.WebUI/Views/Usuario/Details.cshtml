@@ -1,0 +1,77 @@
+﻿@model Jojo.API.Models.UsuarioViewModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Detalles</h1>
+
+
+<div class="row">
+    <div class="col-sm-4">
+        <label class="font-weight-bold">Id</label><br />
+        @Html.DisplayFor(model => model.user_Id)
+    </div>
+    <div class="col-sm-4">
+        <label class="font-weight-bold">Nombre Usuario</label><br />
+        @Html.DisplayFor(model => model.user_NombreUsuario)
+    </div>
+    <div class="col-sm-4">
+        <label class="font-weight-bold">Admin</label><br />
+        @Html.DisplayFor(model => model.EsAdmin)
+    </div>
+    <div class="col-sm-4">
+        <br />
+        <label class="font-weight-bold">Rol</label><br />
+        <label id="txtRol">@Html.DisplayFor(model => model.role_Descripcion)</label>
+    </div>
+    <div class="col-sm-4">
+        <br />
+        <label class="font-weight-bold">Empleado</label><br />
+        <label>@Html.DisplayFor(model => model.NombreEmpleado)</label>
+    </div>
+
+
+
+
+
+    <div class="col-sm-12 rounded">
+        <br />
+        <div class="card border-info">
+            <div class="card-header bg-transparent border-info">
+                Auditoria
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Usuario Creación</th>
+                            <th>Fecha Creación</th>
+                            <th>Último Usuario Modificador</th>
+                            <th>Última Fecha Modificación</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@Html.DisplayFor(model => model.empl_Crea)</td>
+                            <td>@Html.DisplayFor(model => model.user_FechaCrea)</td>
+                            <td>@Html.DisplayFor(model => model.empl_Modifica)</td>
+                            <td>@Html.DisplayFor(model => model.user_FechaModifica)</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div>
+    <br />
+    <a class="btn btn-info" asp-action="Index">Regresar</a>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>

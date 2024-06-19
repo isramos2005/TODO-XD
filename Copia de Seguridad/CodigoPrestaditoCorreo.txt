@@ -1,0 +1,23 @@
+               string body = $@"
+               <html>
+               <head>
+                   <link href=""https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"" rel=""stylesheet"" integrity=""sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"" crossorigin=""anonymous"">
+               </head>
+               <body style=""text-align: center; margin-bottom: 0px;"">
+                   <div class=""container"" style=""background-color: #513267; padding: 20px; border-radius: 10px;"">
+                       <p class=""text-white lead"" style=""color: white;font-size: 18px;"">Nota: Favor no responder este correo</p>
+                       <p class=""text-white lead"" style=""color: white;font-size: 18px;""> Gracias.</p>
+                       <div class=""container pb-5"" style=""margin-top: 0px; padding: 20px; background-color: #e3aa49; border-radius: 10px;"">
+                           <div class=""mx-auto mb-4"" style=""width: 100%; height: auto; overflow: hidden; background-color: #ffffff; margin: auto; border-radius: 10px;"">
+                               <img src=""https://www.miprestadito.com/miprestadito/images/logos/logo_prestadito.png"" class=""img-fluid"" alt=""Logo"" style=""width: 100%; height: auto;"">
+                           </div>
+                           <h1 class=""display-4 text-white"" style=""border-radius: 10px;color: white;"">Gráficas General de Ventas Novanet</h1>
+                           <h3 class=""lead text-white"" style=""border-radius: 10px;color: white;"">Haga clic en el botón de abajo para acceder a Gráficas General Ventas Novanet.</h3>
+                           <a href=""https://orion.novanetgroup.com/Reportes/ReportesClientesFinalesInstaladosGlobalPDFExportart?EnviarCorreo=1"" style=""background-color: #513267; color: white; padding: 15px 25px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 10px;"">Ver Reporte</a>
+                       </div>
+                   </div>
+               </body>
+               </html>";
+
+correo para prestadito
+

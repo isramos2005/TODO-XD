@@ -1,0 +1,389 @@
+﻿@model IEnumerable<Jojo.API.Models.UsuarioViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Usuarios</h1>
+
+<p>
+    <button class="btn btn-primary" onclick="ModalCrear()">Nuevo <i class="pli-add"></i></button>
+</p>
+
+<table class="table table-hover col-12" id="DataTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.user_NombreUsuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NombreEmpleado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EsAdmin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.role_Descripcion)
+            </th>
+            <th class="3">
+                Acciones
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.user_NombreUsuario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreEmpleado)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.EsAdmin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.role_Descripcion)
+                </td>
+                <td class="col-3">
+                    <button class="btn btn-outline-warning" onclick="ModalEditar('@item.user_Id,@item.user_NombreUsuario,@item.user_Admin,@item.empl_Id,@item.role_Id')"><i class='icon pli-pen-4'></i></button>
+                    @Html.ActionLink("", "Details", new { id = item.user_Id }, new { @class = "btn btn-outline-info pli-eye-visible" })
+                    <button class="btn btn-outline-danger" onclick="ModalDelete('@item.user_Id')"><i class='icon pli-trash'></i></button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+<!-- Insertar Usuarios -->
+<form id="FI" action="@Url.Action("Create","Usuario")" method="post">
+    <div class="modal fade" id="ModalCrear" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                    <button type="button" class="btn-close" onclick="LimpiarInsert()" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="row">
+                        <div class="col-6">
+                            <label>Nombre Usuario</label>
+                            <input type="text" id="txtNombreUsuaIn" name="txtNombreUsuaIn" class="form-control" />
+                        </div>
+
+                        <div class="col-6">
+                            <label>Contraseña</label>
+                            <input type="text" id="txtContraIn" name="txtContraIn" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <label class="mt-3">Catedrático</label>
+
+                            <select name="ddlempl_IdIn" id="ddlempl_IdIn" class="form-control mb-3" asp-items="ViewBag.empl">
+                                <option value="">Elige un empleado</option>
+                            </select>
+                        </div>
+
+                        <div class="col-6">
+                            <label class="mt-3">Rol</label>
+
+                            <select name="CkRolIn" id="CkRolIn" class="form-control" asp-items="ViewBag.roles_Id">
+                                <option value="">Elige un rol</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <label class="mt-3">Admin</label><br />
+                    <input type="radio" id="RdbAdminIn" name="RdbAdminIn" class="icheckbox_minimal" value="1" />Si
+                    <input type="radio" id="RdbAdminIn" name="RdbAdminIn" class="icheckbox_minimal" value="0" />No
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="ModalCrearCerrar()" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Cancelar <i class="la la-ban"></i>
+                    </button>
+                    <button type="button" onclick="Ingresar()" class="btn btn-primary">
+                        Guardar <i class="la la-check"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+<!-- Editar Usuarios -->
+<form id="FE" action="@Url.Action("Update","Usuario")" method="post">
+    <div class="modal fade" id="ModalEditar" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                    <button type="button" class="btn-close" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="hidden" id="usua_IdEdit" name="usua_IdEdit" class="form-control" />
+
+                    <div class="row">
+                        <div class="col-12">
+                            <label class="mt-3">Nombre Usuario</label>
+                            <input type="text" id="txtNombreUsuaEdit" disabled name="txtNombreUsuaEdit" class="form-control" />
+                        </div>
+                    </div>
+
+                    <div class="row mt-3">
+                        <div class="col-6">
+                            <label class="mt-3">Catedrático</label>
+
+                            <select name="ddlempl_IdEdit" id="ddlempl_IdEdit" class="form-control" asp-items="ViewBag.empl">
+                                <option value="">Elige un empleado</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label class="mt-3">Rol</label>
+
+                            <select name="CkRolEdit" id="CkRolEdit" class="form-control" asp-items="ViewBag.roles_Id">
+                                <option value="">Elige un rol</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="ml-1">
+                        <label class="mt-3">Admin</label><br />
+                        <input type="radio" class="icheckbox_minimal" id="S" name="RdbAdminEd"  value="1" />Si
+                        <input type="radio" class="icheckbox_minimal" id="N" name="RdbAdminEd" value="0" />No
+                        <label id="validarAdminEdit" hidden class="text-danger">Campo Requerido</label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="ModalEditarCerrar()" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Cancelar <i class="la la-ban"></i>
+                    </button>
+                    <button type="button" onclick="Ingresar2()" class="btn btn-primary">
+                        Guardar Cambios <i class="la la-check"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+<!-- Elimar Usuarios -->
+<form action="@Url.Action("Delete","Usuario")" method="post" id="FD">
+    <div class="modal fade" id="ModalDelete" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center font-18">
+                    <h4 class="padding-top-30 mb-30 weight-500">¿Desea Eliminar Este Registro?</h4>
+
+                    <input type="hidden" id="usua_IdD" name="usua_Id" class="form-control" />
+
+
+                    <div class="row">
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-primary border-radius-100 btn-block confirmation-btn" data-dismiss="modal">Cancelar<i class="la la-ban"></i></button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" onclick="Ingresar3()" class="btn btn-danger border-radius-100 btn-block confirmation-btn" data-dismiss="modal">Eliminar<i class="bx bx-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#DataTable').dataTable({
+            "language": {
+                "url": "https://cdn.datatables.net/plug-ins/1.13.2/i18n/es-ES.json"
+            },
+
+        });
+
+        var crea = sessionStorage.getItem("Createuser");
+        if (crea == "si") {
+            iziToast.success({
+                title: 'Bien',
+                message: 'El registro se ha insertado con éxito',
+                position: 'topRight',
+            });
+        }
+        sessionStorage.setItem("Createuser", null);
+
+        var edit = sessionStorage.getItem("Edituser");
+        console.log(edit);
+        if (edit == "si") {
+            iziToast.success({
+                title: 'Bien',
+                message: 'El registro se ha editado con éxito',
+                position: 'topRight',
+            });
+        }
+        sessionStorage.setItem("Edituser", null);
+
+        var elim = sessionStorage.getItem("Elimuser");
+        console.log(elim);
+        if (edit == "si") {
+            iziToast.success({
+                title: 'Bien',
+                message: 'El registro se ha editado con éxito',
+                position: 'topRight',
+            });
+        }
+        sessionStorage.setItem("Elimuser", null);
+    });
+
+
+    function ModalCrear() {
+        $("#ModalCrear").modal("show");
+    }
+
+    function ModalEditar(cadena) {
+        var datastring = cadena;
+        console.log(cadena)
+        var data = datastring.split(',');
+        $("#usua_IdEdit").val(data[0]);
+        $("#txtNombreUsuaEdit").val(data[1]);
+
+
+        if (data[2] == "True") {
+            $("#S").prop("checked", true);
+        }
+        else {
+            $("#N").prop("checked", true);
+        }
+
+        $("#ddlempl_IdEdit").val(data[3]);
+
+        $("#CkRolEdit").val(data[4]);
+        $("#ModalEditar").modal("show");
+    }
+
+    function ModalEditarCerrar() {
+        $("#ModalEditar").modal("hide");
+
+    }
+    function ModalDelete(id) {
+        $("#usua_IdD").val(id);
+        $("#ModalDelete").modal("show");
+    }
+
+    function ModalCrearCerrar() {
+        $("#ModalCrear").modal("hide");
+        $("#descripcionI").val("");
+    }
+
+    function Ingresar() {
+
+
+        var canInsert = true;
+
+        if ($("#txtNombreUsuaIn").val() == "") {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El campo Nombre de Usuario es requerido',
+                position: 'topRight',
+
+            });
+            canInsert = false;
+        }
+        if ($("#txtContraIn").val() == "") {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El campo Contraseña es requerido',
+                position: 'topRight',
+
+            });
+            canInsert = false;
+        }
+        if ($('input[name=RdbAdminIn]:checked').val() == "null" || $('input[name=RdbAdminIn]:checked').val() == "" || $('input[name=RdbAdminIn]:checked').val() == undefined) {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El campo Admin es requerido',
+                position: 'topRight',
+
+            });
+            canInsert = false;
+        }
+        if ($('input[name=RdbAdminIn]:checked').val() == "0" && $("#CkRolIn").val() == "") {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'Si no es Admin el Usuario debe tener un rol',
+                position: 'topRight',
+
+            });
+            canInsert = false;
+        }
+        if ($("#ddlempl_IdIn").val() == null || $("#ddlempl_IdIn").val() == "") {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El campo Empleado es requerido',
+                position: 'topRight',
+
+            });
+            canInsert = false;
+        }
+        if (canInsert) {
+            sessionStorage.setItem("Createuser", "si");
+            $("#FI").submit();
+        }
+    }
+    function Ingresar2() {
+
+        var canInsert = true;
+
+        if ($('input[name=RdbAdminEd]:checked').val() == null || $('input[name=RdbAdminEd]:checked').val() == "") {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El campo Admin es requerido',
+                position: 'topRight',
+
+            });
+            canInsert = false;
+        }
+
+        if ($('input[name=RdbAdminEd]:checked').val() == "0" && $("#CkRolEdit").val() == "") {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'Si el Usuario no es Admin debe tener un rol',
+                position: 'topRight',
+
+            });
+            canInsert = false;
+        }
+
+        if ($("#ddlempl_IdEdit").val == "") {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El campo Empleado es requerido',
+                position: 'topRight',
+
+            });
+            canInsert = false;
+        }
+
+        if (canInsert == true) {
+            sessionStorage.setItem("Editeuser", "si");
+            $("#FE").submit();
+        }
+    }
+
+
+    function Ingresar3() {
+        sessionStorage.setItem("Elimeuser", "si");
+        $("#FD").submit();
+    }
+</script>

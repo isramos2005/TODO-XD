@@ -1,0 +1,103 @@
+﻿@model Jojo.WebUI.Models.FacturaViewModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Detalles</h1>
+<div>
+
+    <div class="row">
+        <div class="col-sm-3">
+            <label class="font-weight-bold">Id</label><br />
+            @Html.DisplayFor(model => model.fact_Id)
+        </div>
+        <div class="col-sm-3">
+            <label class="font-weight-bold">Cliente</label><br />
+            <label>@Html.DisplayFor(model => model.NombreCliente)</label>
+        </div>
+        <div class="col-sm-3">
+            <label class="font-weight-bold">Empleado</label><br />
+            <label>@Html.DisplayFor(model => model.NombreEmpleado)</label>
+        </div>
+        <div class="col-sm-3">
+            <br />
+            <label class="font-weight-bold">Fecha Compra</label><br />
+            @Html.DisplayFor(model => model.fact_fechacompra)
+        </div>
+    </div>
+</div>
+
+<div class="mt-5">
+    <table class="table" id="DataTable">
+        <thead class="bg-dark">
+            <tr>
+                <th class="text-light text-center">
+                    Id
+                </th>
+                <th class="text-light text-center">
+                    Producto
+                </th>
+                <th class="text-light text-center">
+                    Precio
+                </th>
+                <th class="text-light text-center">
+                    Cantidad
+                </th>
+            </tr>
+        </thead>
+        <tbody id="tbodyVentas">
+            @foreach (var item in ViewBag.Detalles)
+            {
+                <tr>
+                    <td>
+                        @item.facd_Id
+                    </td>
+                    <td>
+                        @item.prod_Descripcion
+                    </td>
+                    <td>
+                        @item.facd_PrecioUnitario
+                    </td>
+                    <td>
+                        @item.prod_Cantidad
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+    <div class="row mt-2">
+        <div class="col-sm-4">
+            <label>SubTotal</label>
+            <input class="form-control border-dark" type="text" id="txtSubTotal" value="@ViewBag.Subtotal" disabled />
+        </div>
+        <div class="col-sm-4">
+            <label>IVA</label>
+            <input class="form-control border-dark" type="text" id="txtIVA" value="@ViewBag.IVA" disabled />
+        </div>
+        <div class="col-sm-4">
+            <label>Total</label>
+            <input class="form-control border-dark" type="text" id="txtTotal" value="@ViewBag.Total" disabled />
+        </div>
+    </div>
+</div>
+
+<div>
+    <br />
+    <a class="btn btn-info" asp-action="Index">Regresar</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#DataTable').dataTable({
+            "language": {
+                "url": "https://cdn.datatables.net/plug-ins/1.13.2/i18n/es-ES.json"
+            },
+
+        });
+    });
+</script>

@@ -1,0 +1,154 @@
+﻿@model IEnumerable<Jojo.WebUI.Models.FacturaViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="~/examples/libs/jspdf.umd.js"></script>
+<script src="~/examples/mitubachi-normal.js"></script>
+<script src="~/examples/libs/faker.min.js"></script>
+<script src="~/dist/jspdf.plugin.autotable.js"></script>
+
+<div class="card" style="border:1px solid #283c4c;">
+    <div class="card-header text-center" style="background: rgb(207,177,216); background: radial-gradient(circle, rgba(207,177,216,1) 0%, rgba(190,94,190,1) 0%, rgba(129,57,142,1) 62%, rgba(84,31,107,1) 100%);">
+
+        <div class="row">
+            <div class="col">
+                <h1 class="text-white" style="margin-top:0px;">Ventas</h1>
+            </div>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <div class="col-4">
+                <p class="text-white">Registro por dia</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body d-flex justify-content-center">
+
+        <div hidden>
+
+            <table class="table dataTables" id="DataTable">
+                <thead>
+                    <tr>
+                        <th>
+                            Fecha
+                        </th>
+                        <th>
+                            Subtotal
+                        </th>
+                        <th>
+                            IVA
+                        </th>
+                        <th>
+                            Total
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Fecha)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SubTotal_Dia)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IVA_Dia)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Total_Dia)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+
+
+        </div>
+            <iframe id="pdf-preview" style="height:1000px; width:1000px"></iframe>
+    </div>
+</div>
+
+<script>
+    if (!window.jsPDF) window.jsPDF = window.jspdf.jsPDF
+
+    //boton exporta
+    $(document).ready(function () {
+        // Obtener la tabla por su id
+        var tabla = $('#DataTable');
+
+        // Obtener los encabezados de la tabla
+        var encabezados = tabla.find('th').map(function (index, element) {
+            // Obtener solo las primeras 5 columnas
+            if (index <= 5) {
+                return $(element).text();
+            }
+        }).get();
+
+        // Obtener los datos de la tabla
+        var datos = tabla.find('tbody tr').map(function () {
+            var fila = $(this);
+            var celdas = fila.find('td').map(function () {
+                return $(this).text();
+            }).get();
+            return [celdas]; // Se envuelve el arreglo de celdas dentro de otro arreglo
+        }).get();
+        // Crear el objeto de configuración para autoTable
+        var config = {
+            head: [encabezados],
+            body: datos,
+            startY: 70,
+            didDrawPage: function (data) {
+                // Establecer el margen superior de la tabla en cada página
+                data.settings.margin.top = 70;
+                ///reyeno
+                var img = new Image();
+                img.src = '/Ventaspordía.png';
+                data.doc.addImage(img, 'JPEG', data.settings.margin.left, 10, 182, 55);
+                // Establecer la posición de inicio de la tabla en cada página
+                data.startY = data.settings.margin.top + 50; // Altura de la imagen
+            },
+            didParseCell: function (data) {
+                // Agregar la imagen en la primera celda de la primera fila
+                if (data.section === 'head' && data.row.index === 0 && data.cell.index === 0) {
+                    var img = new Image();
+                    img.src = '/Ventaspordía.png';
+                    var imgData = getBase64Image(img);
+                    data.cell.styles.fillColor = '#FFFFFF';
+                    data.cell.styles.textColor = '#000000';
+                    data.cell.styles.fontSize = 15;
+                    data.cell.styles.cellPadding = 10;
+                    data.cell.styles.overflow = 'linebreak';
+                    data.cell.contentWidth = 190;
+                    data.cell.text = '';
+                    data.cell.raw = imgData;
+                }
+            }
+        };
+        // Crear el PDF con autoTable
+        var pdf = new jsPDF();
+        pdf.autoTable(config);
+        // Obtener la URL del objeto Blob y establecerla como src del iframe
+        var pdfBlob = pdf.output('blob');
+        var pdfUrl = URL.createObjectURL(pdfBlob);
+        $('#pdf-preview').attr('src', pdfUrl);
+    });
+    // Función para convertir la imagen en base64
+    function getBase64Image(img) {
+        var canvas = document.createElement("canvas");
+        canvas.width = img.width;
+        canvas.height = img.height;
+        var ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0);
+        var dataURL = canvas.toDataURL("image/jpeg");
+        return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+    }
+</script>

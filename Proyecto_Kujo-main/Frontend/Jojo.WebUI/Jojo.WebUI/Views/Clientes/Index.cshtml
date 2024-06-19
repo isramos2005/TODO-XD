@@ -1,0 +1,167 @@
+﻿@model IEnumerable<Jojo.WebUI.Models.ClienteViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Clientes</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Nuevo <i class="pli-add"></i></a>
+</p>
+<div class=" table-responsive">
+    <table class="table" id="DataTable">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.clie_Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.clie_Nombres)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.clie_ApellIdos)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.clieSexo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.estc_Descripcion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.dept_Descripcion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.muni_Descripcion)
+                </th>
+                <th class="col-6">
+                    Acciones
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.clie_Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.clie_Nombres)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.clie_ApellIdos)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.clieSexo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.estc_Descripcion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.dept_Descripcion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.muni_Descripcion)
+                    </td>
+                    <td class="col-6">
+                        @Html.ActionLink("", "Edit", new { id = item.clie_Id }, new { @class = "btn btn-outline-warning pli-pen-4" })
+                        @Html.ActionLink("", "Details", new { id = item.clie_Id }, new { @class = "btn btn-outline-info pli-eye-visible" })
+                        <button class="btn btn-outline-danger pli-trash" onclick="ModalDelete('@item.clie_Id')"></button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+
+@*Delete*@
+<div class="modal fade" id="ModalDelete" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTopTitle"></h5>
+            </div>
+            <form action="@Url.Action("Delete","Clientes")" method="post" id="FD">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <input type="hidden"
+                                   id="idD"
+                                   class="form-control"
+                                   name="idD" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center h4">
+                            <h4 class="padding-top-30 mb-30 weight-500">¿Desea Eliminar Este Registro?</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-primary border-radius-100 btn-block confirmation-btn" data-dismiss="modal">Cancelar<i class="la la-ban"></i></button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" onclick="Ingresar3()" class="btn btn-danger border-radius-100 btn-block confirmation-btn" data-dismiss="modal">Eliminar<i class="bx bx-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#DataTable').dataTable({
+            "language": {
+                "url": "https://cdn.datatables.net/plug-ins/1.13.2/i18n/es-ES.json"
+            },
+
+        });
+
+        var crea = sessionStorage.getItem("Createclie");
+        if (crea == "si") {
+            iziToast.success({
+                title: 'Bien',
+                message: 'El registro se ha insertado con éxito',
+                position: 'topRight',
+            });
+        }
+        sessionStorage.setItem("Createclie", null);
+
+        var edit = sessionStorage.getItem("Editclie");
+        if (edit == "si") {
+            iziToast.success({
+                title: 'Bien',
+                message: 'El registro se ha editado con éxito',
+                position: 'topRight',
+            });
+        }
+        sessionStorage.setItem("Editclie", null);
+
+        var elim = sessionStorage.getItem("Elimclie");
+        console.log(elim);
+        if (edit == "si") {
+            iziToast.success({
+                title: 'Bien',
+                message: 'El registro se ha editado con éxito',
+                position: 'topRight',
+            });
+        }
+        sessionStorage.setItem("Elimclie", null);
+    });
+
+
+    function ModalDelete(id) {
+        $("#idD").val(id);
+        $("#ModalDelete").modal("show");
+    }
+    function Ingresar3() {
+        sessionStorage.setItem("Elimclie", "si");
+        $("#FD").submit();
+    }
+</script>

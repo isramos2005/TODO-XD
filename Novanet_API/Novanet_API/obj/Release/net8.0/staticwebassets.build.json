@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "b31Vv3CC/crnZvkApDtLb+4ATd4InCTn5oVcZ9ZiLaI=",
+  "Source": "Novanet.API",
+  "BasePath": "_content/Novanet.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

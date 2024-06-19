@@ -1,0 +1,645 @@
+﻿{
+   "CodeGenerationMode": 4,
+   "ContextClassName": "ORIONContext",
+   "ContextNamespace": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Entities",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "Novanet.Entities",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 2,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[__MigrationHistory]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Agencias_Direcciones]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Agencias_Maestro]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AspNetRoles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AspNetUserClaims]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AspNetUserLogins]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AspNetUserRoles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[AspNetUsers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BasesCallCenter_Bitacoras]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BasesCallCenter_CatalogoGestiones]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BasesCallCenter_Clientes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_AntiguedadLaboral]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_Ciudades]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_ColoniasFalsas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_Configuraciones]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_DocumentosRequeridos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_DocumentosRequeridos_Detalle]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_EstadosCiviles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_Fondos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[catalogo_FotosInstalacion]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_Marcas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_Modelos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_OLT]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_Paquetes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_Parentescos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_Perfil]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_Productos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_Proveedores]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_Puestos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_RangosSalariales]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_RazonDeclinar]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_RepresentantesLegales]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_Sistema_Documentos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_TipoDeProductoContable]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_TipoMovimiento]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_TipoPersona]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_TipoProducto]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_TipoVivienda]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_TrabajosFalsos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_Ubicaciones]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CatalogoOrigendelCliente]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Cliente_Referencia]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Cliente_Referencia_Respuestas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Clientes_Atrasados_LinksdePago]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Clientes_LinksdePago]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Clientes_Maestro]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Clientes_Perfil]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Clientes_Servicios_Bitacoras]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Clientes_Servicios_BitacorasConexiones]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ClientesMovil_Logins]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ClientesReferidosCreditos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Contador]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Contratista_Maestro]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Contratista_SolicitudInstalacion]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Contratista_SolicitudInstalacion_Detalle]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Contratista_SolicitudInstalacion_Detalle_CodigoBarras]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CredPrecalificado_OrigenCliente]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Devolucion_Detalle]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Devolucion_Maestro]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[EmailTemplate]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Empresas_Maestro]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_addresses]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_atrasosMoraHisComTar]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_bandeuda]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_Bitacora]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_Bitacora_WebService]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_Bitacora_WSCoreFinanciero]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_Catalogo_Perfiles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_CatalogoCapacidadePago]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_CatalogoEstados]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_CatalogoOcupaciones]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_CatalogoOperacion]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_CatalogoPrecalificado]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_CatalogoScores]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_Cliente]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_Cliente_Perfil]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_Cliente_TipoPersona]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_Clientes_EstadoPrecalificado]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_conDiasAtrasoComTar]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_Configuraciones]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_conteosMoraBancaria12M]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_conteosMoraBancaria18M]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_conteosMoraBancaria24M]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_conteosMoraBancaria36M]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_correosElectronico]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_deucomer]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_diasAtrasoConsolidado]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_fiadoresDeudaComercial]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_Garantia]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_highRisk]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_historicoBandeuda]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_historicoDeucomer]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_historicoTardeuda]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_infoConsultas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_infoFiadores]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_maximoDiasAtrasoBanca24M]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_morInfo]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_primeraReferenciaBandeuda]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_primeraReferenciaDeucomer]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_primeraReferenciaTardeuda]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_referenciasImpugnadas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_score]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_scoreHistorico]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_sicom]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_tardeuda]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_TardeudaExtrafinanciamiento]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Equifax_telefonos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Firmas_Orion]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[FirmaToken_Orion]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Geo_Barrio]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Geo_BarrioColonia]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Geo_Departamento]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Geo_Municipio]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Geo_Pais]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Geo_Poblado]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Inventario_Movimiento_Detalle]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Inventario_Movimiento_Maestro]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ListaNegra_Identidad]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ListaNegra_Telefonos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[MensajeriaMasiva_Detalle]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Orion_Catalogo_Gestion]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Orion_CatalogoContratista_Instalacion]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Orion_Clientes_Bitacoras]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Orion_EstadodeCuentaUsuario]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Orion_EstadodeCuentaUsuario_CatalogoTipoMovimiento]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OrionSolicitud_Declinadas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OrionSolicitud_DetalleCliente_ServicioContratado]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OrionSolicitud_Documentos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OrionSolicitud_EquifaxCliente]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OrionSolicitud_HistorialMantenimientos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[OrionSolicitud_Maestro]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Pagos_PaginaWeb_Depositos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Paquetes_Detalle]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Paquetes_Maestro]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Parametros_ConversionDeMonedas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PrivilegiosPorRol]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Producto_Precios_Detalle]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Productos_Inventario]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Productos_Maestro]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Productos_Movimientos_Detalle]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Productos_Movimientos_Maestro]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Roles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RolesPorUsuario]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Solicitud_Instalacion_Bitacoras]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Solicitudes_AdicionProducto_Detalle]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Solicitudes_AdicionProducto_Maestro]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SolicitudInstalacion_Documentos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TecnicosPorContratista]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[temporalpruebas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Usuarios_Maestro]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": null,
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

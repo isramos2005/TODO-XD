@@ -1,0 +1,34 @@
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.BusinessLogic\bin\Debug\net8.0\Novanet.BusinessLogic.deps.json
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.BusinessLogic\bin\Debug\net8.0\Novanet.BusinessLogic.dll
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.BusinessLogic\bin\Debug\net8.0\Novanet.BusinessLogic.pdb
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.BusinessLogic\bin\Debug\net8.0\Novanet.DataAccess.dll
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.BusinessLogic\bin\Debug\net8.0\Novanet.Entities.dll
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.BusinessLogic\bin\Debug\net8.0\Novanet.DataAccess.pdb
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.BusinessLogic\bin\Debug\net8.0\Novanet.Entities.pdb
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\Novanet.BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\Novanet.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\Novanet.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\Novanet.BusinessLogic.AssemblyInfo.cs
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\Novanet.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\Novanet..7ADE6F3D.Up2Date
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\Novanet.BusinessLogic.dll
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\refint\Novanet.BusinessLogic.dll
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\Novanet.BusinessLogic.pdb
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\ref\Novanet.BusinessLogic.dll
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\Novanet.BusinessLogic.csproj.AssemblyReference.cache
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\Novanet.BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\Novanet.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\Novanet.BusinessLogic.AssemblyInfo.cs
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\Novanet.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.BusinessLogic\bin\Debug\net8.0\Novanet.BusinessLogic.deps.json
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.BusinessLogic\bin\Debug\net8.0\Novanet.BusinessLogic.dll
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.BusinessLogic\bin\Debug\net8.0\Novanet.BusinessLogic.pdb
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.BusinessLogic\bin\Debug\net8.0\Novanet.DataAccess.dll
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.BusinessLogic\bin\Debug\net8.0\Novanet.Entities.dll
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.BusinessLogic\bin\Debug\net8.0\Novanet.DataAccess.pdb
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.BusinessLogic\bin\Debug\net8.0\Novanet.Entities.pdb
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\Novanet..7ADE6F3D.Up2Date
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\Novanet.BusinessLogic.dll
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\refint\Novanet.BusinessLogic.dll
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\Novanet.BusinessLogic.pdb
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.BusinessLogic\obj\Debug\net8.0\ref\Novanet.BusinessLogic.dll

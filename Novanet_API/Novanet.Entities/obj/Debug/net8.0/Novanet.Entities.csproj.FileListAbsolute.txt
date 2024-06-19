@@ -1,0 +1,22 @@
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.Entities\bin\Debug\net8.0\Novanet.Entities.deps.json
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.Entities\bin\Debug\net8.0\Novanet.Entities.dll
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.Entities\bin\Debug\net8.0\Novanet.Entities.pdb
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.Entities\obj\Debug\net8.0\Novanet.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.Entities\obj\Debug\net8.0\Novanet.Entities.AssemblyInfoInputs.cache
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.Entities\obj\Debug\net8.0\Novanet.Entities.AssemblyInfo.cs
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.Entities\obj\Debug\net8.0\Novanet.Entities.csproj.CoreCompileInputs.cache
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.Entities\obj\Debug\net8.0\Novanet.Entities.dll
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.Entities\obj\Debug\net8.0\refint\Novanet.Entities.dll
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.Entities\obj\Debug\net8.0\Novanet.Entities.pdb
+C:\Users\JSaucedaR\Desktop\Nueva carpeta\Novanet_API\Novanet.Entities\obj\Debug\net8.0\ref\Novanet.Entities.dll
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.Entities\bin\Debug\net8.0\Novanet.Entities.deps.json
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.Entities\bin\Debug\net8.0\Novanet.Entities.dll
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.Entities\bin\Debug\net8.0\Novanet.Entities.pdb
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.Entities\obj\Debug\net8.0\Novanet.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.Entities\obj\Debug\net8.0\Novanet.Entities.AssemblyInfoInputs.cache
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.Entities\obj\Debug\net8.0\Novanet.Entities.AssemblyInfo.cs
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.Entities\obj\Debug\net8.0\Novanet.Entities.csproj.CoreCompileInputs.cache
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.Entities\obj\Debug\net8.0\Novanet.Entities.dll
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.Entities\obj\Debug\net8.0\refint\Novanet.Entities.dll
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.Entities\obj\Debug\net8.0\Novanet.Entities.pdb
+C:\Users\JSaucedaR\Desktop\Novanet_API\Novanet.Entities\obj\Debug\net8.0\ref\Novanet.Entities.dll

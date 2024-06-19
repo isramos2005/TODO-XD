@@ -1,0 +1,437 @@
+﻿{
+   "CodeGenerationMode": 4,
+   "ContextClassName": "SoporteOPContext",
+   "ContextNamespace": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Entities",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "SistemaTickets.Entities",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 2,
+   "SelectedToBeGenerated": 2,
+   "T4TemplatePath": null,
+   "Tables": [
+      {
+         "Name": "[dbo].[AGOSTO_2022_V3]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Base20Menos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Base20Menos_Depurada]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Base3$]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BaseCallCenter]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[BaseClientesEquifax]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CallCenter_Agenda]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CallCenter_Clientes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CallCenter_Clientes_BasesAnteriores]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CallCenter_Estado]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CallCenter_GestionBitacora]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CallCenter_PropuestaEconomica]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CallCenter_Telefonos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CallCenter_Usuarios]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Carga3$]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CargaCallCenter]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CargaCC5]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_EmpresasIHSS]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_Manual_Detalle]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Catalogo_Manuales]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[CNE]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Contador]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DAT0112023$]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Dat012024$]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DAT082023$]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Demandas$]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Direcciones]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[DireccionesCC]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Hoja_IHSS2023_FEB]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Hoja1X2]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HojaX]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HojaX1]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[HojaX2]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Hojax3]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS_02_2023]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2017]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2019]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2019_05]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2019_08]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2019_12]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2020_06]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2020_11]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2021_03]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2021_06]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2021_10]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2022_01]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2022_05]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2022_08]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2022_11]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2023_02]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2023_05]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2023_08]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2023_11]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSS2024_01]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[IHSSBASEMayo_2022]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Informacion_placasIP]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[planilla2010]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PortalClientes_ClientesMora]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Prestadito$]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Prestadito2]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[ProcesoArchivosSAF]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[PruebasCargas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Requerimiento_Tipo_Adjuntos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Requerimientos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Requerimientos_Adjuntos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Requerimientos_Areas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Requerimientos_Bitacora]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Requerimientos_Bitacoras]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Requerimientos_Bitacoras_Estados]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Requerimientos_Catalogo_Categorias]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Requerimientos_Catalogo_Estados]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Requerimientos_Catalogo_TipodeRequerimiento]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Requerimientos_Comentarios]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Requerimientos_Contadores]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Requerimientos_Estados]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Requerimientos_Maestro]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Requerimientos_Usuarios]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[RpaTotal$]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Sheet1$]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SIEAvancesCC]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SIEAvancesCCMes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[SRC_Clientes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TBL_CNE_M_CENSO_NACIONAL]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TBL_CNE_R_CODIGOS_HABI_INHA]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TBL_CNE_R_ESTATUS_IDENTIDAD]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TBL_CNE_R_SEXO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TBL_DPGE_A_ALDEA]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TBL_DPGE_A_DEPARTAMENTO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TBL_DPGE_A_LUGAR_POBLADO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TBL_DPGE_A_MUNICIPIO]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TBL_DPGE_M_CENTRO_VOTACION]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TBL_DPGE_M_SECTOR_ELECTORAL]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[TBL_DPGE_R_AREA]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tdatos$]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Telefonos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tutoriales_AccesosAreas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Tutoriales_Videos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[xbase2019$]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": null,
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": true,
+   "UseDbContextSplitting": false,
+   "UseDecimalDataAnnotationForSprocResult": true,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UsePrefixNavigationNaming": false,
+   "UseSchemaFolders": false,
+   "UseSchemaNamespaces": false,
+   "UseSpatial": false,
+   "UseT4": false
+}

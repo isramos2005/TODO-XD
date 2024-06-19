@@ -1,0 +1,12 @@
+C:\Users\JSaucedaR\Desktop\SistemaTickets\SistemaTickets.Entities\bin\Debug\net8.0\SistemaTickets.Entities.deps.json
+C:\Users\JSaucedaR\Desktop\SistemaTickets\SistemaTickets.Entities\bin\Debug\net8.0\SistemaTickets.Entities.dll
+C:\Users\JSaucedaR\Desktop\SistemaTickets\SistemaTickets.Entities\bin\Debug\net8.0\SistemaTickets.Entities.pdb
+C:\Users\JSaucedaR\Desktop\SistemaTickets\SistemaTickets.Entities\obj\Debug\net8.0\SistemaTickets.Entities.csproj.AssemblyReference.cache
+C:\Users\JSaucedaR\Desktop\SistemaTickets\SistemaTickets.Entities\obj\Debug\net8.0\SistemaTickets.Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JSaucedaR\Desktop\SistemaTickets\SistemaTickets.Entities\obj\Debug\net8.0\SistemaTickets.Entities.AssemblyInfoInputs.cache
+C:\Users\JSaucedaR\Desktop\SistemaTickets\SistemaTickets.Entities\obj\Debug\net8.0\SistemaTickets.Entities.AssemblyInfo.cs
+C:\Users\JSaucedaR\Desktop\SistemaTickets\SistemaTickets.Entities\obj\Debug\net8.0\SistemaTickets.Entities.csproj.CoreCompileInputs.cache
+C:\Users\JSaucedaR\Desktop\SistemaTickets\SistemaTickets.Entities\obj\Debug\net8.0\SistemaTickets.Entities.dll
+C:\Users\JSaucedaR\Desktop\SistemaTickets\SistemaTickets.Entities\obj\Debug\net8.0\refint\SistemaTickets.Entities.dll
+C:\Users\JSaucedaR\Desktop\SistemaTickets\SistemaTickets.Entities\obj\Debug\net8.0\SistemaTickets.Entities.pdb
+C:\Users\JSaucedaR\Desktop\SistemaTickets\SistemaTickets.Entities\obj\Debug\net8.0\ref\SistemaTickets.Entities.dll

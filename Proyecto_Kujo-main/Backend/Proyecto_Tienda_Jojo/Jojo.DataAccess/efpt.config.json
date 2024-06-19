@@ -1,0 +1,93 @@
+﻿{
+   "CodeGenerationMode": 0,
+   "ContextClassName": "Db_KujocenterContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Context",
+   "ProjectRootNamespace": "Jojo.DataAccess",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 1,
+   "Tables": [
+      {
+         "Name": "[acce].[tbPantallas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[acce].[tbPantallasPorRol]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[acce].[tbRoles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[acce].[tbUsuarios]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[gral].[tbDepartamentos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[gral].[tbEstadosCiviles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[gral].[tbMunicipios]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[kujo].[tbCategorias]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[kujo].[tbClientes]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[kujo].[tbEmpleados]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[kujo].[tbFacturas]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[kujo].[tbFacturasDetalles]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[kujo].[tbProductos]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[kujo].[tbProveedores]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[kujo].[tbSucursales]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "ISAAC\\SQLEXPRESS.db_KujoCenter",
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": true,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseNoConstructor": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoNavigations": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false
+}

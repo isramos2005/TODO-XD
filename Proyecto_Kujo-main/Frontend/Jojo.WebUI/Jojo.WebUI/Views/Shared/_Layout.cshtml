@@ -1,0 +1,398 @@
+﻿@using Microsoft.Extensions.DependencyInjection
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <meta name="description" content="The navigation will transform into a small vertical bar that will save you space for the content to be displayed on the screen.">
+    <title>Kujo Center</title>
+
+    <!-- STYLESHEETS -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--- -->
+    <!-- Fonts [ OPTIONAL ] -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="shortcut" href="~/icon.jpeg" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&amp;family=Ubuntu:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="~/assets/iziToast-master/dist/css/iziToast.css">
+
+
+    <!-- Bootstrap CSS [ REQUIRED ] -->
+    <link rel="stylesheet" href="~/assets/css/color-schemes/all-headers/violet/bootstrap.min.css">
+
+    <!-- Nifty CSS [ REQUIRED ] -->
+    <link rel="stylesheet" href="~/assets/css/color-schemes/all-headers/violet/nifty.min.css">
+
+    <!-- Nifty Demo Icons [ OPTIONAL ] -->
+    <link rel="stylesheet" href="~/assets/css/demo-purpose/demo-icons.min.css">
+
+    <!-- Demo purpose CSS [ DEMO ] -->
+    <link rel="stylesheet" href="~/assets/css/demo-purpose/demo-settings.min.css">
+
+    <!-- Demo purpose CSS [ PREMIUM ] -->
+    <link rel="stylesheet" href="~/assets/premium/icon-sets/icons/line-icons/premium-line-icons.min.css">
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~---
+
+    [ REQUIRED ]
+    You must include this category in your project.
+
+
+    [ OPTIONAL ]
+    This is an optional plugin. You may choose to include it in your project.
+
+
+    [ DEMO ]
+    Used for demonstration purposes only. This category should NOT be included in your project.
+
+
+    [ SAMPLE ]
+    Here's a sample script that explains how to initialize plugins and/or components: This category should NOT be included in your project.
+
+
+    Detailed information and more samples can be found in the documentation.
+
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--- -->
+</head>
+
+
+<body class="jumping">
+
+    <!-- PAGE CONTAINER -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <div id="root" class="root mn--max hd--expanded">
+
+        <!-- CONTENTS -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <section id="content" class="content">
+            <div class="content__header content__boxed overlapping">
+                <div class="content__wrap">
+
+                    <!-- Breadcrumb -->
+                    <nav aria-label="breadcrumb">
+
+                    </nav>
+                    <!-- END : Breadcrumb -->
+                </div>
+
+            </div>
+
+            <div class="content__boxed">
+                <div class="content__wrap">
+                    <div class="card  border-dark text-center mb-4 col-xl-12">
+                        <div class="card-header h5"> Kujo Center<img src="~/oraora.jpg" style="width: 5%;"></div>
+                        <div class="card-body">
+
+
+                            @RenderBody()
+
+                        </div>
+                        <div class="card-footer">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- FOOTER -->
+            <footer class="mt-auto">
+                <div class="content__boxed">
+                    <div class="content__wrap py-3 py-md-1 d-flex flex-column flex-md-row align-items-md-center">
+                        <div class="text-nowrap mb-4 mb-md-0">Copyright © 2023 <a href="#" class="ms-1 btn-link fw-bold">Jojo's</a></div>
+                    </div>
+                </div>
+            </footer>
+            <!-- END - FOOTER -->
+
+        </section>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- END - CONTENTS -->
+        <!-- HEADER -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <header class="header">
+            <div class="header__inner">
+
+                <!-- Brand -->
+                <div class="header__brand">
+                    <div class="brand-wrap">
+
+                        <!-- Brand logo -->
+                        <a href="~/index.html" class="brand-img stretched-link">
+                            <img src="~/jojo.png" alt="Kujo Logo" class="Nifty logo" width="40" height="40">
+                        </a>
+
+                        <!-- Brand title -->
+                        <div class="brand-title">Kujo Center</div>
+
+                        <!-- You can also use IMG or SVG instead of a text element. -->
+
+                    </div>
+                </div>
+                <!-- End - Brand -->
+
+                <div class="header__content">
+
+                    <!-- Content Header - Left Side: -->
+                    <div class="header__content-start">
+
+                        <!-- Navigation Toggler -->
+                        <button type="button" class="nav-toggler header__btn btn btn-icon btn-sm" aria-label="Nav Toggler">
+                            <i class="demo-psi-view-list"></i>
+                        </button>
+
+                        <!-- Searchbox -->
+                        <div class="header-searchbox mt-2">
+
+                            <!-- Searchbox toggler for small devices -->
+                            <label for="header-search-input" class="header__btn d-md-none btn btn-icon rounded-pill shadow-none border-0 btn-sm" type="button">
+                                <i class="demo-psi-magnifi-glass"></i>
+                            </label>
+
+                            <!-- Searchbox input -->
+                            <form class="searchbox searchbox--auto-expand searchbox--hide-btn input-group">
+                                <input id="header-search-input" class="searchbox__input form-control bg-transparent" type="search" placeholder="Buscar . . ." aria-label="Search">
+                                <div class="searchbox__backdrop">
+                                    <button class="searchbox__btn header__btn btn btn-icon rounded shadow-none border-0 btn-sm" type="button" id="button-addon2">
+                                        <i class="demo-pli-magnifi-glass"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- End - Content Header - Left Side -->
+
+                </div>
+            </div>
+        </header>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- END - HEADER -->
+        <!-- MAIN NAVIGATION -->
+        @using Microsoft.AspNetCore.Http
+        @{ var session = Context.RequestServices.GetRequiredService<IHttpContextAccessor>()?.HttpContext.Session;
+            int usua_ID = ViewBag.usua_ID = session?.GetInt32("UsuarioId");
+            ViewBag.Usuario = session?.GetString("Nombre");
+            ViewBag.Admin = session?.GetString("Admin");
+            ViewBag.Rol = session?.GetString("Rol");
+            if (usua_ID == 0)
+            {
+                <script>window.location.href = '/Login';</script>
+            }
+        }
+        <input type="hidden" name="ID" id="ID" value="@ViewBag.usua_ID" />
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <nav id="mainnav-container" class="mainnav">
+            <div class="mainnav__inner">
+
+                <!-- Navigation menu -->
+                <div class="mainnav__top-content scrollable-content pb-5">
+
+                    <!-- Profile Widget -->
+                    <div class="mainnav__profile mt-3 d-flex3">
+
+                        <div class="mt-2 d-mn-max"></div>
+
+                        <!-- Profile picture  -->
+                        <div class="mininav-toggle text-center py-2 collapsed">
+                            <img class="mainnav__avatar img-md rounded-circle border" src="~/jotaro.jpeg" alt="Profile Picture">
+                        </div>
+
+                        <div class="mininav-content collapse d-mn-max">
+                            <div class="d-grid">
+
+                                <!-- User name and position -->
+                                <button class="d-block btn shadow-none p-2" data-bs-toggle="collapse" data-bs-target="#usernav" aria-expanded="false" aria-controls="usernav">
+                                    <span class=" d-flex justify-content-center align-items-center">
+                                        <b class="mb-0 me-3 h6">@ViewBag.Usuario</b>
+                                    </span>
+                                </button>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- End - Profile widget -->
+                    <!-- Navigation Category -->
+                    <div class="mainnav__categoriy py-3">
+                        <h6 class="mainnav__caption mt-0 px-3 fw-bold">Menú</h6>
+                        <ul class="mainnav__menu nav flex-column">
+
+                            <!-- Link with submenu -->
+                            <li class="nav-item">
+
+                                <a href="/Home" class="mininav-toggle nav-link collapsed" id="Home">
+                                    <i class="demo-pli-home fs-5 me-2"></i>
+                                    <span class="nav-label ms-1">Inicio</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mainnav__categoriy py-3">
+                        <ul class="mainnav__menu nav flex-column" id="main-menu-navigation">
+                        </ul>
+                    </div>
+                    <!-- END : Navigation Category -->
+                </div>
+                <!-- End - Navigation menu -->
+                <!-- Bottom navigation menu -->
+                <div class="mainnav__bottom-content border-top pb-2">
+                    <ul id="mainnav" class="mainnav__menu nav flex-column">
+                        <li class="nav-item has-sub">
+                            <form action="@Url.Action("cls_ss","Home")" id="cls_ss" method="post">
+                                <button type="submit" class="btn">
+                                    <b class="nav-link" aria-expanded="false">
+                                        <i class="pli-power-2 fs-5 me-2"></i>
+                                        <span class="nav-label ms-1">Cerrar Sesión</span>
+                                    </b>
+                                </button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <!-- End - Bottom navigation menu -->
+
+            </div>
+        </nav>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- END - MAIN NAVIGATION -->
+        <!-- SIDEBAR -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <!-- END - SIDEBAR -->
+
+    </div>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- END - PAGE CONTAINER -->
+    <!-- SCROLL TO TOP BUTTON -->
+    <div class="scroll-container">
+        <a href="#root" class="scroll-page rounded-circle ratio ratio-1x1" aria-label="Scroll button"></a>
+    </div>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- END - SCROLL TO TOP BUTTON -->
+    <!-- BOXED LAYOUT : BACKGROUND IMAGES CONTENT [ DEMO ] -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- END - BOXED LAYOUT : BACKGROUND IMAGES CONTENT [ DEMO ] -->
+    <!-- OFFCANVAS [ DEMO ] -->
+    <!-- ~
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- END - OFFCANVAS [ DEMO ] -->
+    <!-- JAVASCRIPTS -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- JS Graficas-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Popper JS [ OPTIONAL ] -->
+    <script src="~/assets/vendors/popperjs/popper.min.js" defer=""></script>
+
+    <!-- Bootstrap JS [ OPTIONAL ] -->
+    <script src="~/assets/vendors/bootstrap/bootstrap.min.js" defer=""></script>
+
+    <!-- Nifty JS [ OPTIONAL ] -->
+    <script src="~/assets/js/nifty.js" defer=""></script>
+
+    <!-- Nifty Settings [ DEMO ] -->
+    <script src="~/assets/js/demo-purpose-only.js" defer=""></script>
+
+    <script src="~/assets/iziToast-master/dist/js/iziToast.js"></script>
+
+    <script src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+
+</body>
+</html>
+
+<style>
+
+    .modal-backdrop {
+        background-color: rgb(0 0 0 / 0.83);
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 0vw;
+        height: 0vw;
+    }
+</style>
+
+<script>
+    $(document).ready(function () {
+        var mainMenu = $('#main-menu-navigation');
+        var configItem = "";
+        var ddlS = true;
+        var ddlU = true;
+        $.ajax({
+            type: "POST",
+            url: "/Home/Pantallas",
+            data: { id: $("#ID").val() },
+            dataType: "json",
+            success: function (response) {
+                $.each(response, function (i, value) {
+                    console.log(value.pant_Identificador.substring(0, 4));
+                    if (value.pant_Identificador.substring(0, 4) == "acce" && ddlS == true) {
+
+
+                        configItem = $('<li class="nav-item has-sub" id="ddlS"><a href="#" class="mininav-toggle nav-link collapsed"><i class="pli-firewall fs-5 me-2"></i><span class="nav-label ms-1">Seguridad</span></a></li>');
+                        ddlS = false;
+                    }
+
+                    if (value.pant_Identificador.substring(0, 4) == "kujo" && ddlU == true) {
+                        configItem = $('<li class="nav-item has-sub" id="ddlU"><a href="#" class="mininav-toggle nav-link collapsed"><i class="pli-shop fs-5 me-2"></i><span class="nav-label ms-1">Sistema Tienda</span></a></li>');
+                        ddlU = false;
+                    }
+
+
+
+                    mainMenu.append(configItem);
+                });
+            },
+            error: function (xhr, status, error) {
+                console.log("error");
+            }
+        });
+
+        setTimeout(function () {
+
+            var Universidad = $('#ddlU');
+            var Access = $('#ddlS');
+
+            var configItemU = "";
+            var configItemS = "";
+
+            $.ajax({
+                type: "POST",
+                url: "/Home/Pantallas",
+                data: { id: $("#ID").val() },
+                dataType: "json",
+                success: function (response) {
+                    $.each(response, function (i, value) {
+                        if (value.pant_Identificador.substring(0, 4) == "acce") {
+                            configItemS = ('<ul class="mininav-content nav collapse"><li class="nav-item"><a  href="' + value.pant_href + '" class="nav-link">' + value.pant_Nombre + '</a></li ></ul>');
+                            Access.append(configItemS);
+                        }
+
+                        if (value.pant_Identificador.substring(0, 4) == "kujo") {
+                            configItemU = ('<ul class="mininav-content nav collapse"><li class="nav-item"><a href="' + value.pant_href + '" class="nav-link">' + value.pant_Nombre + '</a></li ></ul>');
+                            Universidad.append(configItemU);
+                        }
+
+                    });
+                },
+            });
+        }, 1000);
+
+    });
+
+          $(document).on('click', '.mininav-toggle', function (e) {
+            e.preventDefault();
+
+            var $this = $(this);
+
+            if (!$this.parent().hasClass('open')) {
+                $this.closest('.nav').find('.nav-item.open .nav-link').trigger('click');
+            }
+
+            $this.parent().toggleClass('open');
+            $this.next().toggleClass('show');
+        });
+</script>

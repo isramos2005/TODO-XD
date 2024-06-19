@@ -1,0 +1,402 @@
+﻿@model IEnumerable<Jojo.WebUI.Models.RolesViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Roles</h1>
+
+<p>
+    <button class="btn btn-primary" onclick="ModalCrear()">Nuevo <i class="pli-add"></i></button>
+</p>
+
+<table class="table table-hover col-12" id="DataTable">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.role_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.role_Descripcion)
+            </th>
+            <th>
+                Acciones
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.role_Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.role_Descripcion)
+                </td>
+                <td class="col-4">
+                    <button class="btn btn-outline-warning" onclick="ModalEditar('@item.role_Id,@item.role_Descripcion')"><i class='icon pli-pen-4'></i></button>
+                    @Html.ActionLink("", "Details", new { id = item.role_Id }, new { @class = "btn btn-outline-info pli-eye-visible" })
+                    <button class="btn btn-outline-danger" onclick="ModalDelete('@item.role_Id')"><i class='icon pli-trash'></i></button>
+                    <button class="btn btn-outline-dark" onclick="ModalPantallas('@item.role_Id,@item.role_Descripcion')"><i class='icon pli-key'></i></button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+<div class="modal fade" id="ModalCrear" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTopTitle">Crear</h5>
+            </div>
+            <form action="@Url.Action("Create","Roles")" method="post" id="FI">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col mb-3">
+                            <label for="nameWithTitle" class="form-label">Descripción</label>
+                            <input type="text"
+                                   id="descripcionI"
+                                   class="form-control"
+                                   name="descripcionI" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="ModalCrearCerrar()" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                       Cancelar
+                    </button>
+                    <button type="button" onclick="Ingresar()" class="btn btn-primary">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="ModalEditar" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTopTitle">Edición</h5>
+            </div>
+            <form action="@Url.Action("Update","Roles")" method="post" id="FE">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col mb-3">
+                            <input type="hidden"
+                                   id="idE"
+                                   class="form-control"
+                                   name="idE" />
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="nameWithTitle" class="form-label">Descripción</label>
+                            <input type="text"
+                                   id="descripcionE"
+                                   class="form-control"
+                                   name="descripcionE" />
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="ModalEditarCerrar()" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        Cancelar
+                    </button>
+                    <button type="button" onclick="Ingresar2()" class="btn btn-primary">
+                       Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="ModalPantallas" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTopTitle"></h5>
+            </div>
+            <form action="@Url.Action("Pantallas","Roles")" method="post" id="FP">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <input type="hidden"
+                                   id="idP"
+                                   class="form-control"
+                                   name="idP" />
+                        </div>
+                    </div>
+                    <label class="brand-text">Accesos del Rol</label>
+                    <div class="row">
+                        <div class="col mb-3">
+                            <input type="text"
+                                   disabled
+                                   id="descripcionP"
+                                   class="form-control text-center" />
+                        </div>
+                    </div>
+                    <div>
+                        <label class="brand-text">Esquemas</label>
+                        <div class="col">
+                            <div class="btn-group mt-2" role="group" aria-label="Basic example">
+                                <button type="button" onclick="Pantallas('acce')" class="btn btn-outline-dark"><i class="pli-firewall fs-5 me-2"></i><span class="menu-title" data-i18n="">Seguridad</span></button>
+                                <button type="button" onclick="Pantallas('kujo')" class="btn btn-outline-dark"><i class="pli-shop fs-5 me-2"></i><span class="menu-title" data-i18n="">Kujo Center</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-1 text-center" id="PantallasCK">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="ModalPantallasCerrar()" class="btn btn-primary text-center">
+                        <b class="brand-text">Listo </b>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="ModalDelete" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTopTitle"></h5>
+            </div>
+            <form action="@Url.Action("Delete","Roles")" method="post" id="FD">
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col">
+                            <input type="hidden"
+                                   id="idD"
+                                   class="form-control"
+                                   name="idD" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center h4">
+                            <h4 class="padding-top-30 mb-30 weight-500">¿Desea Eliminar Este Registro?</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <button type="submit" class="btn btn-primary border-radius-100 btn-block confirmation-btn" data-dismiss="modal">Cancelar<i class="la la-ban"></i></button>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" onclick="Ingresar3()" class="btn btn-danger border-radius-100 btn-block confirmation-btn" data-dismiss="modal">Eliminar<i class="bx bx-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $('#DataTable').dataTable({
+            "language": {
+                "url": "https://cdn.datatables.net/plug-ins/1.13.2/i18n/es-ES.json"
+            },
+
+        });
+
+        var crea = sessionStorage.getItem("Createrole");
+        if (crea == "si") {
+            iziToast.success({
+                title: 'Bien',
+                message: 'El registro se ha insertado con éxito',
+                position: 'topRight',
+            });
+        }
+        sessionStorage.setItem("Createrole", null);
+
+        var edit = sessionStorage.getItem("Editrole");
+        console.log(edit);
+        if (edit == "si") {
+            iziToast.success({
+                title: 'Bien',
+                message: 'El registro se ha editado con éxito',
+                position: 'topRight',
+            });
+        }
+        sessionStorage.setItem("Editrole", null);
+
+        var elim = sessionStorage.getItem("Elimrole");
+        console.log(elim);
+        if (edit == "si") {
+            iziToast.success({
+                title: 'Bien',
+                message: 'El registro se ha editado con éxito',
+                position: 'topRight',
+            });
+        }
+        sessionStorage.setItem("Elimrole", null);
+    });
+
+
+    function ModalCrear() {
+        $("#ModalCrear").modal("show");
+    }
+
+    function ModalEditar(cadena) {
+        var cadenaS = cadena;
+        var data = cadenaS.split(',');
+
+        $("#idE").val(data[0])
+        $("#descripcionE").val(data[1])
+
+        $("#ModalEditar").modal("show");
+    }
+
+    function ModalEditarCerrar() {
+        $("#ModalEditar").modal("hide");
+
+    }
+    function ModalDelete(id) {
+        $("#idD").val(id);
+        $("#ModalDelete").modal("show");
+    }
+
+    function ModalPantallas(cadena) {
+        var cadenaS = cadena;
+        var data = cadenaS.split(',');
+
+        $("#idP").val(data[0]);
+        $("#descripcionP").val(data[1]);
+        $('#PantallasCK').empty();
+        $("#ModalPantallas").modal("show");
+    }
+
+    function ModalPantallasCerrar() {
+        $('#PantallasCK').empty();
+        $("#ModalPantallas").modal("hide");
+    }
+
+    function ModalCrearCerrar() {
+        $("#ModalCrear").modal("hide");
+        $("#descripcionI").val("");
+    }
+
+    function Ingresar() {
+
+        var canInsert = true;
+
+        if ($("#descripcionI").val() == "") {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El campo Descripción es requerido',
+                position: 'topRight',
+
+            });
+
+            canInsert = false;
+        }
+        if (canInsert) {
+            sessionStorage.setItem("Createrole", "si");
+            $("#FI").submit();
+        }
+    }
+    function Ingresar2() {
+
+        var canInsert = true;
+
+        if ($("#descripcionE").val() == "") {
+            iziToast.warning({
+                title: 'Advertencia',
+                message: 'El campo Descripción es requerido',
+                position: 'topRight',
+
+            });
+
+            canInsert = false;
+        }
+        if (canInsert) {
+            sessionStorage.setItem("Editrole", "si");
+            $("#FE").submit();
+        }
+    }
+
+
+    function Ingresar3() {
+        sessionStorage.setItem("Elimrole", "si");
+        $("#FD").submit();
+    }
+
+    function Pantallas(ident) {
+        var identi = ident;
+        var mainMenu = $('#PantallasCK');
+        var role_Id = $('#idP').val();
+        var pant_Id;
+
+        $.ajax({
+            type: "POST",
+            url: "/Roles/PantallasCK",
+            data: { ident: identi },
+            dataType: "json",
+            success: function (response) {
+                $('#PantallasCK').empty();
+                $.each(response, function (i, value) {
+                    var ck = $('<input type="checkbox" class="icheckbox_minimal  ml-1" name="idPant" value="' + value.pant_Id + '" />  <label class="brand-text">' + value.pant_Nombre + '</label>');
+                    mainMenu.append(ck);
+
+                    ck.change(function () {
+                        if ($(this).is(':checked')) {
+                            $.ajax({
+                                type: "POST",
+                                url: "/Roles/PantallasAgg",
+                                data: { role_Id: role_Id, pant_Id: $(this).val() },
+                                dataType: "json",
+                                success: function (response) {
+                                    console.log(response);
+                                }
+                            });
+                        } else {
+                            $.ajax({
+                                type: "POST",
+                                url: "/Roles/PantallasElim",
+                                data: { role_Id: role_Id, pant_Id: $(this).val()},
+                                dataType: "json",
+                                success: function (response) {
+                                    console.log(response);
+                                }
+                            });
+                        }
+                    });
+                });
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Roles/PantallasChecked",
+                    data: { role_Id: role_Id },
+                    dataType: "json",
+                    success: function (response) {
+                        $.each(response, function (i, value) {
+                            $('#PantallasCK input[value="' + value.pant_Id + '"]').prop('checked', true);
+                        });
+                    }
+                });
+            },
+            error: function (xhr, status, error) {
+                console.log("error");
+            }
+        });
+
+
+
+    }
+
+</script>
